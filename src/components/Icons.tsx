@@ -219,3 +219,184 @@ export function IconWater({ className = "w-5 h-5" }: { className?: string }) {
     </svg>
   );
 }
+
+/* ── Amenity Icons ── */
+
+export function IconHairdryer({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 11h2l1.5-3h8L16 11h2" />
+      <circle cx="11.5" cy="8" r="1.5" />
+      <path d="M16 11c2 0 4-1.5 4-3.5S18 4 16 4H7C5 4 3 5.5 3 7.5S5 11 7 11" />
+      <path d="M10 11v6a2 2 0 004 0v-6" />
+      <line x1="10" y1="20" x2="14" y2="20" />
+    </svg>
+  );
+}
+
+export function IconCoffee({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 8h1a4 4 0 010 8h-1" />
+      <path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z" />
+      <line x1="6" y1="2" x2="6" y2="4" />
+      <line x1="10" y1="2" x2="10" y2="4" />
+      <line x1="14" y1="2" x2="14" y2="4" />
+    </svg>
+  );
+}
+
+export function IconDispenser({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2" />
+      <line x1="6" y1="8" x2="18" y2="8" />
+      <circle cx="12" cy="14" r="2" />
+      <path d="M12 16v3" />
+      <line x1="10" y1="5" x2="14" y2="5" />
+    </svg>
+  );
+}
+
+export function IconFridge({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <line x1="4" y1="10" x2="20" y2="10" />
+      <line x1="16" y1="5" x2="16" y2="8" />
+      <line x1="16" y1="13" x2="16" y2="17" />
+    </svg>
+  );
+}
+
+export function IconTV({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="14" rx="2" />
+      <line x1="8" y1="21" x2="16" y2="21" />
+      <line x1="12" y1="18" x2="12" y2="21" />
+    </svg>
+  );
+}
+
+export function IconAC({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="10" rx="2" />
+      <path d="M6 17c0 1.5.5 3 2 4" />
+      <path d="M12 17c0 1.5.5 3 2 4" />
+      <path d="M18 17c0 1.5-.5 3-2 4" />
+      <line x1="6" y1="9" x2="18" y2="9" />
+    </svg>
+  );
+}
+
+export function IconToaster({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="8" width="18" height="10" rx="2" />
+      <path d="M7 8V6a1 1 0 011-1h2a1 1 0 011 1v2" />
+      <path d="M13 8V6a1 1 0 011-1h2a1 1 0 011 1v2" />
+      <line x1="7" y1="21" x2="7" y2="18" />
+      <line x1="17" y1="21" x2="17" y2="18" />
+      <line x1="7" y1="13" x2="17" y2="13" />
+    </svg>
+  );
+}
+
+export function IconMicrowave({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <rect x="5" y="7" width="10" height="10" rx="1" />
+      <line x1="18" y1="8" x2="18" y2="8.01" />
+      <line x1="18" y1="11" x2="18" y2="11.01" />
+      <line x1="18" y1="14" x2="18" y2="14.01" />
+    </svg>
+  );
+}
+
+export function IconInduction({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="6" width="20" height="12" rx="2" />
+      <circle cx="8" cy="12" r="3" />
+      <circle cx="16" cy="12" r="2.5" />
+      <circle cx="8" cy="12" r="1" />
+    </svg>
+  );
+}
+
+export function IconUtensils({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2" />
+      <path d="M7 2v20" />
+      <path d="M21 15V2a5 5 0 00-5 5v6h4" />
+      <path d="M18 15v7" />
+    </svg>
+  );
+}
+
+export function IconPlate({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <ellipse cx="12" cy="14" rx="9" ry="4" />
+      <path d="M3 14v1a9 4 0 0018 0v-1" />
+      <path d="M8 10c0-2 1.8-4 4-4s4 2 4 4" />
+    </svg>
+  );
+}
+
+export function IconWineOpener({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="12" y1="2" x2="12" y2="14" />
+      <path d="M8 6c0 0 2 2 4 2s4-2 4-2" />
+      <circle cx="12" cy="17" r="3" />
+      <line x1="12" y1="20" x2="12" y2="22" />
+    </svg>
+  );
+}
+
+export function IconWineGlass({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M8 2h8l-1 8a4 4 0 01-3 3.9A4 4 0 019 10L8 2z" />
+      <line x1="12" y1="14" x2="12" y2="20" />
+      <line x1="8" y1="20" x2="16" y2="20" />
+      <path d="M8 5h8" />
+    </svg>
+  );
+}
+
+export function IconBathrobe({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M8 2l4 4 4-4" />
+      <path d="M12 6v16" />
+      <path d="M8 2C5 3 3 6 3 9v13h6V10" />
+      <path d="M16 2c3 1 5 4 5 7v13h-6V10" />
+      <line x1="3" y1="14" x2="9" y2="14" />
+      <line x1="15" y1="14" x2="21" y2="14" />
+    </svg>
+  );
+}
+
+export function IconAmenity({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3c-1.5 0-3 1-3 3v2H6a2 2 0 00-2 2v8a2 2 0 002 2h4v-7h4v7h4a2 2 0 002-2v-8a2 2 0 00-2-2h-3V6c0-2-1.5-3-3-3z" />
+    </svg>
+  );
+}
+
+export function IconSpeaker({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="3" />
+      <circle cx="12" cy="14" r="3" />
+      <circle cx="12" cy="6" r="1" />
+    </svg>
+  );
+}

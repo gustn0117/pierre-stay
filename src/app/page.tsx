@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import {
+  IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
+  IconAC, IconToaster, IconMicrowave, IconInduction, IconUtensils,
+  IconPlate, IconWineOpener, IconWineGlass, IconBathrobe, IconAmenity,
+  IconSpeaker,
+} from "@/components/Icons";
 
 /* ─────────────────────────────
    1. Hero  (h:800, bg image, centered text + logo)
@@ -246,18 +252,37 @@ function RoomDetails() {
    6. Amenities
    ───────────────────────────── */
 function Amenities() {
-  const items = [
-    "드라이어", "커피머신", "정수기(얼음/온수)", "냉장고", "LG 스탠바이미",
-    "에어컨", "토스트기", "전자레인지", "인덕션", "조리도구", "식기",
-    "와인 오프너", "와인잔", "샤워 가운", "욕실 어메니티", "스피커",
+  const items: { icon: React.ReactNode; label: string }[] = [
+    { icon: <IconHairdryer className="w-6 h-6" />, label: "드라이어" },
+    { icon: <IconCoffee className="w-6 h-6" />, label: "커피머신" },
+    { icon: <IconDispenser className="w-6 h-6" />, label: "정수기(얼음/온수)" },
+    { icon: <IconFridge className="w-6 h-6" />, label: "냉장고" },
+    { icon: <IconTV className="w-6 h-6" />, label: "LG 스탠바이미" },
+    { icon: <IconAC className="w-6 h-6" />, label: "에어컨" },
+    { icon: <IconToaster className="w-6 h-6" />, label: "토스트기" },
+    { icon: <IconMicrowave className="w-6 h-6" />, label: "전자레인지" },
+    { icon: <IconInduction className="w-6 h-6" />, label: "인덕션" },
+    { icon: <IconUtensils className="w-6 h-6" />, label: "조리도구" },
+    { icon: <IconPlate className="w-6 h-6" />, label: "식기" },
+    { icon: <IconWineOpener className="w-6 h-6" />, label: "와인 오프너" },
+    { icon: <IconWineGlass className="w-6 h-6" />, label: "와인잔" },
+    { icon: <IconBathrobe className="w-6 h-6" />, label: "샤워 가운" },
+    { icon: <IconAmenity className="w-6 h-6" />, label: "욕실 어메니티" },
+    { icon: <IconSpeaker className="w-6 h-6" />, label: "스피커" },
   ];
+
   return (
     <section className="max-w-[1280px] mx-auto px-4 md:px-0 mt-16 mb-16">
-      <div className="border-t border-neutral-200 pt-8">
-        <h4 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-6">전 객실 포함 사항</h4>
-        <div className="flex flex-wrap gap-x-4 gap-y-2">
+      <div className="border-t border-neutral-200 pt-10">
+        <h4 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-8">전 객실 포함 사항</h4>
+        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-y-8 gap-x-4">
           {items.map((item) => (
-            <span key={item} className="text-sm text-neutral-600">• {item}</span>
+            <div key={item.label} className="flex flex-col items-center text-center group">
+              <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 mb-2.5 group-hover:bg-neutral-900 group-hover:text-white transition-all duration-300">
+                {item.icon}
+              </div>
+              <span className="text-[11px] text-neutral-500 leading-tight">{item.label}</span>
+            </div>
           ))}
         </div>
       </div>
