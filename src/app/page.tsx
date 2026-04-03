@@ -38,7 +38,7 @@ function Hero() {
    ───────────────────────────── */
 function RoomTypeSelector() {
   return (
-    <section id="rooms" className="max-w-[1280px] mx-auto py-12">
+    <section id="rooms" className="max-w-[1280px] mx-auto py-24">
       <div className="flex flex-col md:flex-row" style={{ gap: 0 }}>
         {/* Left label */}
         <h4 className="shrink-0 text-base font-semibold text-black px-4 md:px-0 mb-4 md:mb-0" style={{ width: 83 }}>
@@ -87,7 +87,7 @@ function RoomTypeSelector() {
    ───────────────────────────── */
 function IntroSection() {
   return (
-    <section className="max-w-[1280px] mx-auto px-4 md:px-0">
+    <section className="max-w-[1280px] mx-auto px-4 md:px-0 pt-12">
       <div className="flex flex-col" style={{ gap: 48 }}>
         <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black">
           자연과 돌이 만드는 휴식, PIERRE
@@ -131,7 +131,7 @@ function PointSection({
   gallery: string[];
 }) {
   return (
-    <section id={id} className="flex flex-col" style={{ gap: 48, marginTop: 80 }}>
+    <section id={id} className="flex flex-col" style={{ gap: 48, marginTop: 160 }}>
       {/* Gallery - overflow scroll with side padding */}
       <div
         className="overflow-x-scroll gallery-scroll"
@@ -167,7 +167,7 @@ function PointSection({
    ───────────────────────────── */
 function RoomDetails() {
   return (
-    <section className="max-w-[1280px] mx-auto px-4 md:px-0" style={{ marginTop: 80 }}>
+    <section className="max-w-[1280px] mx-auto px-4 md:px-0" style={{ marginTop: 160 }}>
       <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black mb-10">
         객실별 안내 사항
       </h4>
@@ -272,7 +272,7 @@ function Amenities() {
   ];
 
   return (
-    <section className="max-w-[1280px] mx-auto px-4 md:px-0 mt-16 mb-16">
+    <section className="max-w-[1280px] mx-auto px-4 md:px-0 mt-32 mb-32">
       <div className="border-t border-neutral-200 pt-10">
         <h4 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-8">전 객실 포함 사항</h4>
         <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-y-8 gap-x-4">
@@ -304,7 +304,7 @@ function InfoTabs() {
   ];
 
   return (
-    <section id="info" className="max-w-[1280px] mx-auto px-4 md:px-0 py-16">
+    <section id="info" className="max-w-[1280px] mx-auto px-4 md:px-0 py-28">
       <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black mb-8">
         안내사항을 확인하세요
       </h4>
