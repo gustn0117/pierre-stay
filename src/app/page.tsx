@@ -3,12 +3,6 @@
 import { useState } from "react";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import ScrollGallery from "@/components/ScrollGallery";
-import {
-  IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
-  IconAC, IconToaster, IconMicrowave, IconInduction, IconUtensils,
-  IconPlate, IconWineOpener, IconWineGlass, IconBathrobe, IconAmenity,
-  IconSpeaker,
-} from "@/components/Icons";
 
 /* ─────────────────────────────
    1. Hero  (h:800, bg image, centered text + logo)
@@ -20,10 +14,10 @@ function Hero() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 text-center text-white">
         <p style={{ fontSize: 18, fontWeight: 500 }} className="mb-1">
-          Relaxation and tranquility in nature
+          Leisure and relaxation embraced by nature
         </p>
         <p style={{ fontSize: 26, fontWeight: 500 }} className="mb-16">
-          자연 속에서 느끼는 여유와 휴식
+          자연이 감싸는 여유와 휴식
         </p>
         {/* Logo placeholder */}
         <div className="mx-auto flex items-center justify-center" style={{ width: 335, height: 80 }}>
@@ -43,38 +37,41 @@ function RoomTypeSelector() {
       <div className="flex flex-col md:flex-row" style={{ gap: 0 }}>
         {/* Left label */}
         <h4 className="shrink-0 text-base font-semibold text-black px-4 md:px-0 mb-4 md:mb-0" style={{ width: 83 }}>
-          객실타입
+          Type
         </h4>
         {/* Right cards */}
         <div className="flex-1 flex flex-col gap-10 px-4 md:px-0">
           {/* A타입 */}
-          <div className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2">
-            <div className="p-6 flex flex-col gap-1">
-              <p className="text-base font-semibold text-black mb-1">A타입 — 풀빌라 원룸</p>
-              <p className="text-sm text-neutral-500">기준 2인(최대 6인)</p>
-              <p className="text-xs text-neutral-400 mt-1">침대(2) 화장실(1) 거실(1) 주방(1) 야외수영장</p>
-              <p className="text-xs text-neutral-400">체크인 15:00 - 체크아웃 11:00</p>
+          <a href="/rooms" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 hover:border-neutral-400 transition-colors group">
+            <div className="aspect-[16/9] md:aspect-auto">
+              <div className="placeholder-image w-full h-full [&::after]:content-['A타입_PHOTO']" />
             </div>
-            <div className="p-6 flex flex-col justify-between border-t md:border-t-0 md:border-l border-neutral-200">
+            <div className="p-6 flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-light text-black">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <p className="text-base font-semibold text-black mb-1">A타입</p>
+                <p className="text-sm text-neutral-500">기준 2인(최대 6인)</p>
+                <p className="text-2xl font-light text-black mt-4">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
               </div>
-              <a href="tel:010-3542-8138" className="mt-4 inline-flex items-center justify-center px-6 py-3 bg-black text-white text-sm rounded-none w-full">예약문의</a>
+              <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
+                자세히 보기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><polyline points="9 18 15 12 9 6" /></svg>
+              </div>
             </div>
-          </div>
+          </a>
           {/* B타입 - sold out */}
           <div className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative">
-            <div className="absolute inset-0 bg-white/60 z-10 flex items-center justify-center">
-              <span className="bg-neutral-800 text-white px-6 py-2 text-sm tracking-wider">일시 운영중단</span>
+            <div className="absolute inset-0 bg-white/50 z-10 flex items-center justify-center">
+              <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
             </div>
-            <div className="p-6 flex flex-col gap-1">
-              <p className="text-base font-semibold text-black mb-1">B타입 — 블랙&화이트 복층</p>
-              <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
-              <p className="text-xs text-neutral-400 mt-1">침실(2) 온돌방(1) 화장실(3) 거실(1) 주방(1)</p>
-              <p className="text-xs text-neutral-400">체크인 15:00 - 체크아웃 11:00</p>
+            <div className="aspect-[16/9] md:aspect-auto">
+              <div className="placeholder-image w-full h-full [&::after]:content-['B타입_PHOTO']" />
             </div>
-            <div className="p-6 flex flex-col justify-between border-t md:border-t-0 md:border-l border-neutral-200">
-              <p className="text-2xl font-light text-black">500,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+            <div className="p-6 flex flex-col justify-between">
+              <div>
+                <p className="text-base font-semibold text-black mb-1">B타입</p>
+                <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
+                <p className="text-2xl font-light text-black mt-4">500,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -91,7 +88,7 @@ function IntroSection() {
     <section className="max-w-[1280px] mx-auto px-4 md:px-0 pt-12">
       <div className="flex flex-col" style={{ gap: 48 }}>
         <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black">
-          자연과 돌이 만드는 휴식, PIERRE
+          자연의 결을 담은 쉼, PIERRE
         </h4>
         <PlaceholderImage className="w-full" style={{ height: 700 }} />
         <p style={{ fontSize: 16, lineHeight: "32px" }} className="text-black">
@@ -145,121 +142,6 @@ function PointSection({
         </div>
         <div className="md:hidden">
           <p style={{ fontSize: 14, lineHeight: "28px" }} className="text-black">{text}</p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─────────────────────────────
-   5. Room Details  (title + horizontal scroll gallery h:668 + name/specs below)
-   ───────────────────────────── */
-function RoomDetails() {
-  return (
-    <section className="max-w-[1280px] mx-auto px-4 md:px-0" style={{ marginTop: 160 }}>
-      <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black mb-10">
-        객실별 안내 사항
-      </h4>
-
-      {/* A타입 */}
-      <div className="mb-16">
-        <div className="mb-4">
-          <ScrollGallery items={["A타입 1", "A타입 2", "A타입 3", "A타입 4", "A타입 5"]} itemWidth={440} itemHeight={668} gap={8} sidePadding={0} />
-        </div>
-        <p style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">A타입 — 풀빌라 원룸</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-1 text-sm">
-          {[
-            ["기준 인원", "2명 (최대 6명)"],
-            ["체크인 / 체크아웃", "15:00 / 11:00"],
-            ["객실 면적", "82㎡"],
-            ["객실 공간", "침대(2), 화장실(1), 거실(1), 주방(1)"],
-            ["침대 유형", "퀸(2)"],
-            ["편의시설", "수영장(사계절 온수풀), 선베드(2), 야외테라스"],
-          ].map(([label, value]) => (
-            <div key={label} className="flex justify-between py-2 border-b border-neutral-100">
-              <span className="text-neutral-400">{label}</span>
-              <span className="text-neutral-700">{value}</span>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-neutral-400 mt-3">추가 인원 인당 2만원 · 침구류 추가 2만원</p>
-      </div>
-
-      {/* B타입 - sold out */}
-      <div className="room-b-card cursor-default">
-        <div className="room-b-overlay">
-          <div className="bg-neutral-900/80 text-white px-10 py-5 text-center">
-            <p className="text-2xl font-light tracking-wider mb-1">SOLD OUT</p>
-            <p className="text-xs text-white/60">일시 운영중단</p>
-          </div>
-        </div>
-        <div className="room-b-content transition-all duration-500">
-          <div className="mb-4">
-            <ScrollGallery items={["B타입 1", "B타입 2", "B타입 3", "B타입 4", "B타입 5"]} itemWidth={440} itemHeight={668} gap={8} sidePadding={0} />
-          </div>
-          <p style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">B타입 — 블랙&화이트 복층</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-1 text-sm">
-            {[
-              ["기준 인원", "4명 (최대 8명)"],
-              ["체크인 / 체크아웃", "15:00 / 11:00"],
-              ["객실 면적", "2F, 3F 각 82㎡"],
-              ["객실 공간", "침실(2), 온돌방(1), 화장실(3), 거실(1), 주방(1)"],
-              ["침대 유형", "라지킹(1), 퀸(2)"],
-              ["편의시설", "드레스룸, 빔프로젝터, 불멍(가습), 테라스"],
-            ].map(([label, value]) => (
-              <div key={label} className="flex justify-between py-2 border-b border-neutral-100">
-                <span className="text-neutral-400">{label}</span>
-                <span className="text-neutral-700">{value}</span>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-neutral-400 mt-3">추가 인원 인당 2만원 · 침구류 추가 2만원</p>
-        </div>
-      </div>
-
-      <p className="mt-10 text-center text-sm text-neutral-400 py-4 border-t border-neutral-100">
-        1층 풀빌라 객실과 2·3층 복층 객실로 나뉘며, 풀 이용은 1층 객실 전용입니다
-      </p>
-    </section>
-  );
-}
-
-/* ─────────────────────────────
-   6. Amenities
-   ───────────────────────────── */
-function Amenities() {
-  const items: { icon: React.ReactNode; label: string }[] = [
-    { icon: <IconHairdryer className="w-6 h-6" />, label: "드라이어" },
-    { icon: <IconCoffee className="w-6 h-6" />, label: "커피머신" },
-    { icon: <IconDispenser className="w-6 h-6" />, label: "정수기(얼음/온수)" },
-    { icon: <IconFridge className="w-6 h-6" />, label: "냉장고" },
-    { icon: <IconTV className="w-6 h-6" />, label: "LG 스탠바이미" },
-    { icon: <IconAC className="w-6 h-6" />, label: "에어컨" },
-    { icon: <IconToaster className="w-6 h-6" />, label: "토스트기" },
-    { icon: <IconMicrowave className="w-6 h-6" />, label: "전자레인지" },
-    { icon: <IconInduction className="w-6 h-6" />, label: "인덕션" },
-    { icon: <IconUtensils className="w-6 h-6" />, label: "조리도구" },
-    { icon: <IconPlate className="w-6 h-6" />, label: "식기" },
-    { icon: <IconWineOpener className="w-6 h-6" />, label: "와인 오프너" },
-    { icon: <IconWineGlass className="w-6 h-6" />, label: "와인잔" },
-    { icon: <IconBathrobe className="w-6 h-6" />, label: "샤워 가운" },
-    { icon: <IconAmenity className="w-6 h-6" />, label: "욕실 어메니티" },
-    { icon: <IconSpeaker className="w-6 h-6" />, label: "스피커" },
-  ];
-
-  return (
-    <section className="max-w-[1280px] mx-auto px-4 md:px-0 mt-32 mb-32">
-      <div className="border-t border-neutral-200 pt-10">
-        <h4 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-8">전 객실 포함 사항</h4>
-        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-y-8 gap-x-4">
-          {items.map((item) => (
-            <div key={item.label} className="flex flex-col items-center text-center group">
-              <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 mb-2.5 group-hover:bg-neutral-900 group-hover:text-white transition-all duration-300">
-                {item.icon}
-              </div>
-              <span className="text-[11px] text-neutral-500 leading-tight">{item.label}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -415,24 +297,22 @@ export default function Home() {
       <PointSection
         id="about"
         num={1}
-        title="돌이 전하는 안식의 공간"
+        title="바람과 햇살이 머무는 곳"
         gallery={["포인트존 1", "포인트존 2", "포인트존 3", "포인트존 4"]}
         text="포인트존 공간은 '암석'을 모티브로 디자인 되었으며 거친 듯 자연스러운 돌의 질감은 눈으로 보는 순간 강렬한 존재감을 주면서도 동시에 마음을 차분하게 안정시키는 힘이 있습니다. 햇살과 그림자가 포인트존 위를 스칠 때마다, 마치 자연 속에서 시간을 멈춘 듯한 여유를 느끼실 수 있습니다. 돌이 주는 감성은 단순히 시각적 아름다움에 머물지 않습니다. 그 위에 앉거나 기대어 있으면 돌의 견고함이 주는 안정감과 함께 마음 속 긴장이 자연스럽게 풀립니다. 거기에 풀빌라의 프라이빗 수영장과 조화를 이루면 몸과 마음이 완전히 자연과 연결되는 경험을 제공합니다."
       />
       <PointSection
         num={2}
-        title="자연 속에서 즐기는 풀빌라"
+        title="온기가 머무는 공간"
         gallery={["풀빌라 1", "풀빌라 2", "풀빌라 3", "풀빌라 4"]}
         text="서울 근교 용인에 자리한 PIERRE는 자연과 휴식이 만나 완성되는 공간입니다. 견고하면서도 세련된 암석의 아름다움을 그대로 재현한 포인트존은 단순한 장식이 아닌 공간의 중심을 경험으로 자리합니다. 1층 풀빌라 객실에서는 프라이빗 수영장과 함께 포인트존을 마음껏 즐길 수 있으며 2~3층 복층 객실에서는 또 다른 감각적 분위기와 함께 자연 속 여유를 만끽할 수 있습니다. 모든 객실은 자연과 조화를 이루는 디자인으로, 머무는 순간마다 편안함과 평온함을 느낄 수 있도록 설계 되었습니다. 여유로운 햇살 아래 선베드에서 휴식을 즐기고, 맑은 공기 속 수영장과 포인트존에서 특별한 경험을 누리세요."
       />
       <PointSection
         num={3}
-        title="블랙 & 화이트, 감각적인 복층"
+        title="모노톤의 미학"
         gallery={["복층 1", "복층 2", "복층 3", "복층 4"]}
         text="PIERRE의 2,3층 복층 객실은 블랙&화이트 컨셉으로 디자인되어, 아늑한 1층 풀빌라와는 또 다른 묵직하고 세련된 감성을 제공합니다. 모던한 컬러와 심플한 구조 속에서 공간의 선과 질감이 더욱 돋보이며 차분하면서도 고급스러운 분위기를 느끼실 수 있습니다. 복층 구조로 설계되어 개인 공간과 휴식 공간이 자연스럽게 분리되어 있어 연인이나 친구, 가족 모두에게 편안한 스테이를 제공합니다. PIERRE에서만 만날 수 있는, 자연 속 프라이빗 스테이로 여러분을 초대합니다."
       />
-      <RoomDetails />
-      <Amenities />
       <InfoTabs />
     </>
   );

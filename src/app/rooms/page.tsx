@@ -1,252 +1,238 @@
-import type { Metadata } from "next";
-import PlaceholderImage from "@/components/PlaceholderImage";
-import PageHero from "@/components/PageHero";
-import ScrollReveal from "@/components/ScrollReveal";
+"use client";
+
+import { useState } from "react";
+import ScrollGallery from "@/components/ScrollGallery";
 import {
-  IconPool, IconBed, IconBath, IconKitchen, IconLiving,
-  IconSunbed, IconTerrace, IconClock, IconUsers, IconArea,
-  IconFire, IconProjector, IconDress,
+  IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
+  IconAC, IconToaster, IconMicrowave, IconInduction, IconUtensils,
+  IconPlate, IconWineOpener, IconWineGlass, IconBathrobe, IconAmenity,
+  IconSpeaker,
 } from "@/components/Icons";
 
-export const metadata: Metadata = { title: "객실 안내" };
+const amenitiesA = [
+  { icon: <IconHairdryer className="w-6 h-6" />, label: "드라이어" },
+  { icon: <IconCoffee className="w-6 h-6" />, label: "커피머신" },
+  { icon: <IconDispenser className="w-6 h-6" />, label: "정수기(얼음/온수)" },
+  { icon: <IconFridge className="w-6 h-6" />, label: "냉장고" },
+  { icon: <IconTV className="w-6 h-6" />, label: "LG 스탠바이미" },
+  { icon: <IconAC className="w-6 h-6" />, label: "에어컨" },
+  { icon: <IconToaster className="w-6 h-6" />, label: "토스트기" },
+  { icon: <IconMicrowave className="w-6 h-6" />, label: "전자레인지" },
+  { icon: <IconInduction className="w-6 h-6" />, label: "인덕션" },
+  { icon: <IconUtensils className="w-6 h-6" />, label: "조리도구" },
+  { icon: <IconPlate className="w-6 h-6" />, label: "식기" },
+  { icon: <IconWineOpener className="w-6 h-6" />, label: "와인 오프너" },
+  { icon: <IconWineGlass className="w-6 h-6" />, label: "와인잔" },
+  { icon: <IconBathrobe className="w-6 h-6" />, label: "샤워 가운" },
+  { icon: <IconAmenity className="w-6 h-6" />, label: "욕실 어메니티" },
+  { icon: <IconSpeaker className="w-6 h-6" />, label: "스피커" },
+];
 
-function RoomSpec({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <div className="flex items-center gap-4 py-4 border-b border-warm-100 group/spec">
-      <span className="text-warm-300 group-hover/spec:text-warm-600 transition-colors shrink-0">{icon}</span>
-      <span className="text-[12px] text-warm-400 tracking-wide min-w-20">{label}</span>
-      <span className="text-[13px] text-warm-700 ml-auto">{value}</span>
-    </div>
-  );
-}
+const amenitiesB = [
+  { icon: <IconHairdryer className="w-6 h-6" />, label: "드라이어" },
+  { icon: <IconCoffee className="w-6 h-6" />, label: "커피머신" },
+  { icon: <IconDispenser className="w-6 h-6" />, label: "정수기(얼음/온수)" },
+  { icon: <IconFridge className="w-6 h-6" />, label: "냉장고" },
+  { icon: <IconAC className="w-6 h-6" />, label: "에어컨" },
+  { icon: <IconMicrowave className="w-6 h-6" />, label: "전자레인지" },
+  { icon: <IconInduction className="w-6 h-6" />, label: "인덕션" },
+  { icon: <IconUtensils className="w-6 h-6" />, label: "조리도구" },
+  { icon: <IconPlate className="w-6 h-6" />, label: "식기" },
+  { icon: <IconAmenity className="w-6 h-6" />, label: "욕실 어메니티" },
+  { icon: <IconSpeaker className="w-6 h-6" />, label: "스피커" },
+];
 
-function FacilityTag({ icon, label }: { icon: React.ReactNode; label: string }) {
+function AmenityGrid({ items }: { items: { icon: React.ReactNode; label: string }[] }) {
   return (
-    <div className="flex items-center gap-2.5 px-5 py-3 bg-warm-900 text-white rounded-sm text-[11px] tracking-wide hover:bg-warm-800 transition-colors duration-300">
-      <span className="opacity-60">{icon}</span>
-      {label}
+    <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-y-8 gap-x-4">
+      {items.map((item) => (
+        <div key={item.label} className="flex flex-col items-center text-center group">
+          <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 mb-2.5 group-hover:bg-neutral-900 group-hover:text-white transition-all duration-300">
+            {item.icon}
+          </div>
+          <span className="text-[11px] text-neutral-500 leading-tight">{item.label}</span>
+        </div>
+      ))}
     </div>
   );
 }
 
 function RoomA() {
-  const amenities = [
-    "드라이어", "커피머신", "정수기(얼음/온수)", "냉장고",
-    "LG 스탠바이미", "에어컨", "토스트기", "전자레인지",
-    "인덕션", "조리도구", "식기", "와인 오프너",
-    "와인잔", "샤워 가운", "욕실 어메니티", "스피커",
-  ];
-
   return (
-    <ScrollReveal>
-      <div className="bg-white rounded-sm overflow-hidden shadow-[0_4px_60px_-15px_rgba(0,0,0,0.1)]">
-        {/* Image gallery top */}
-        <div className="grid grid-cols-3 gap-1">
-          <div className="col-span-2 img-zoom">
-            <PlaceholderImage className="w-full h-72 md:h-[400px]" label="A타입 메인" />
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="img-zoom flex-1">
-              <PlaceholderImage className="w-full h-full min-h-36" label="A타입 2" />
-            </div>
-            <div className="img-zoom flex-1">
-              <PlaceholderImage className="w-full h-full min-h-36" label="A타입 3" />
-            </div>
-          </div>
+    <div>
+      {/* Gallery */}
+      <ScrollGallery
+        items={["A타입 1", "A타입 2", "A타입 3", "A타입 4", "A타입 5"]}
+        itemWidth={440}
+        itemHeight={668}
+        gap={8}
+        sidePadding={0}
+      />
+
+      <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">
+        <h2 style={{ fontSize: 28, fontWeight: 600 }} className="text-black mb-2">A타입 — 풀빌라 원룸</h2>
+        <p className="text-sm text-neutral-500 mb-8">1층 전용 프라이빗 수영장과 포인트존을 갖춘 원룸형 객실</p>
+
+        {/* Price */}
+        <div className="flex items-end gap-2 mb-10 pb-8 border-b border-neutral-200">
+          <span className="text-4xl font-light text-black">350,000</span>
+          <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
         </div>
 
-        <div className="p-8 md:p-14 lg:p-16">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-            <div>
-              <p className="text-[10px] tracking-[0.5em] uppercase text-warm-400 mb-2">
-                Type A — 원룸타입 · 1층
-              </p>
-              <h2 className="text-3xl md:text-4xl font-extralight tracking-wide">풀빌라 객실</h2>
+        {/* Specs */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-12">
+          {[
+            ["기준 인원", "2명 (최대 6명)"],
+            ["추가 인원", "인당 2만원"],
+            ["체크인 / 체크아웃", "15:00 / 11:00"],
+            ["침구류 추가", "2만원"],
+            ["객실 면적", "82㎡"],
+            ["침대 유형", "퀸(2)"],
+          ].map(([label, value]) => (
+            <div key={label} className="flex justify-between py-3 border-b border-neutral-100">
+              <span className="text-neutral-400">{label}</span>
+              <span className="text-neutral-700">{value}</span>
             </div>
-            <div className="mt-4 md:mt-0 md:text-right">
-              <p className="text-4xl font-extralight">
-                350,000
-                <span className="text-sm text-warm-400 ml-1 font-normal">원 / 1박</span>
-              </p>
-            </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="flex items-center gap-4 mb-12 ornament">
-            <div className="w-1.5 h-1.5 rotate-45 border border-warm-300" />
-          </div>
+        {/* 객실 공간 */}
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">객실 공간</h3>
+        <div className="flex flex-wrap gap-3 mb-12">
+          {["침대(2)", "화장실(1)", "거실(1)", "주방(1)", "야외수영장"].map((item) => (
+            <span key={item} className="px-4 py-2 bg-neutral-100 text-sm text-neutral-700 rounded">{item}</span>
+          ))}
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left - Specs */}
-            <div>
-              <RoomSpec icon={<IconUsers className="w-4 h-4" />} label="인원" value="기준 2명 (최대 6명)" />
-              <RoomSpec icon={<IconArea className="w-4 h-4" />} label="면적" value="82㎡" />
-              <RoomSpec icon={<IconClock className="w-4 h-4" />} label="체크인/아웃" value="15:00 / 11:00" />
-              <RoomSpec icon={<IconBed className="w-4 h-4" />} label="침대" value="퀸 2개" />
-              <RoomSpec icon={<IconBath className="w-4 h-4" />} label="화장실" value="1개" />
-              <RoomSpec icon={<IconLiving className="w-4 h-4" />} label="거실" value="1개" />
-              <RoomSpec icon={<IconKitchen className="w-4 h-4" />} label="주방" value="1개" />
+        {/* 편의시설 */}
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">편의시설</h3>
+        <div className="flex flex-wrap gap-3 mb-12">
+          {["수영장(사계절 온수풀)", "선베드(2)", "야외테라스"].map((item) => (
+            <span key={item} className="px-4 py-2 bg-black text-sm text-white rounded">{item}</span>
+          ))}
+        </div>
 
-              <p className="text-[11px] text-warm-400 mt-6">
-                추가 인원 인당 2만원 · 침구류 추가 2만원
-              </p>
-            </div>
+        {/* 객실 용품 */}
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-6">객실 용품</h3>
+        <AmenityGrid items={amenitiesA} />
 
-            {/* Right - Facilities */}
-            <div className="space-y-10">
-              <div>
-                <h3 className="text-[10px] tracking-[0.4em] uppercase text-warm-400 mb-5">
-                  주요 시설
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <FacilityTag icon={<IconPool className="w-4 h-4" />} label="사계절 온수풀" />
-                  <FacilityTag icon={<IconSunbed className="w-4 h-4" />} label="선베드 (2)" />
-                  <FacilityTag icon={<IconTerrace className="w-4 h-4" />} label="야외 테라스" />
-                </div>
-              </div>
+        <p className="mt-10 text-center text-sm text-neutral-400 py-4 border-t border-neutral-100">
+          1층 풀빌라 객실과 2·3층 복층 객실로 나뉘며, 풀 이용은 1층 객실 전용입니다
+        </p>
 
-              <div>
-                <h3 className="text-[10px] tracking-[0.4em] uppercase text-warm-400 mb-5">
-                  객실 용품
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {amenities.map((item) => (
-                    <span key={item} className="tag-pill bg-warm-50 border border-warm-200 text-warm-600">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 py-5 text-center text-[11px] text-warm-400 tracking-wide border-t border-b border-warm-100">
-            1층 풀빌라 객실과 2·3층 복층 객실로 나뉘며, 풀 이용은 1층 객실 전용입니다
-          </div>
+        {/* 예약 CTA */}
+        <div className="mt-8 mb-16">
+          <a href="tel:010-3542-8138" className="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-sm w-full md:w-auto">
+            예약문의 010-3542-8138
+          </a>
         </div>
       </div>
-    </ScrollReveal>
+    </div>
   );
 }
 
 function RoomB() {
-  const amenities = [
-    "드라이어", "커피머신", "정수기(얼음/온수)", "냉장고",
-    "세탁기/건조기", "에어컨", "전자레인지", "인덕션",
-    "조리도구", "식기", "식기세척기", "욕실 어메니티", "스피커",
-  ];
-
   return (
-    <ScrollReveal>
-      <div className="room-b-card bg-white rounded-sm overflow-hidden shadow-[0_4px_60px_-15px_rgba(0,0,0,0.1)] cursor-default">
-        <div className="room-b-overlay">
-          <div className="text-center text-white">
-            <div className="bg-warm-900/95 backdrop-blur-lg px-16 py-10 border border-white/10">
-              <p className="text-[10px] tracking-[0.6em] uppercase opacity-50 mb-3">Temporarily</p>
-              <p className="text-4xl font-extralight tracking-[0.2em] mb-3">SOLD OUT</p>
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <div className="w-8 h-px bg-white/20" />
-                <div className="w-1 h-1 rotate-45 border border-white/30" />
-                <div className="w-8 h-px bg-white/20" />
-              </div>
-              <p className="text-xs tracking-[0.15em] opacity-50">일시 운영중단</p>
-            </div>
-          </div>
+    <div>
+      <ScrollGallery
+        items={["B타입 1", "B타입 2", "B타입 3", "B타입 4", "B타입 5"]}
+        itemWidth={440}
+        itemHeight={668}
+        gap={8}
+        sidePadding={0}
+      />
+
+      <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">
+        <div className="flex items-center gap-4 mb-2">
+          <h2 style={{ fontSize: 28, fontWeight: 600 }} className="text-black">B타입 — 블랙&화이트 복층</h2>
+          <span className="px-3 py-1 bg-neutral-600 text-white text-xs tracking-wider">SOLD OUT</span>
+        </div>
+        <p className="text-sm text-neutral-500 mb-8">모던한 블랙&화이트 컨셉의 2~3층 복층 객실</p>
+
+        <div className="flex items-end gap-2 mb-10 pb-8 border-b border-neutral-200">
+          <span className="text-4xl font-light text-black">500,000</span>
+          <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
         </div>
 
-        <div className="room-b-content transition-all duration-500">
-          <div className="grid grid-cols-3 gap-1">
-            <div className="col-span-2 img-zoom">
-              <PlaceholderImage className="w-full h-72 md:h-[400px]" label="B타입 메인" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-12">
+          {[
+            ["기준 인원", "4명 (최대 8명)"],
+            ["추가 인원", "인당 2만원"],
+            ["체크인 / 체크아웃", "15:00 / 11:00"],
+            ["침구류 추가", "2만원"],
+            ["객실 면적", "2F, 3F 각 82㎡"],
+            ["침대 유형", "라지킹(1), 퀸(2)"],
+          ].map(([label, value]) => (
+            <div key={label} className="flex justify-between py-3 border-b border-neutral-100">
+              <span className="text-neutral-400">{label}</span>
+              <span className="text-neutral-700">{value}</span>
             </div>
-            <div className="flex flex-col gap-1">
-              <div className="img-zoom flex-1">
-                <PlaceholderImage className="w-full h-full min-h-36" label="B타입 2" />
-              </div>
-              <div className="img-zoom flex-1">
-                <PlaceholderImage className="w-full h-full min-h-36" label="B타입 3" />
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="p-8 md:p-14 lg:p-16">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-              <div>
-                <p className="text-[10px] tracking-[0.5em] uppercase text-warm-400 mb-2">
-                  Type B — 복층타입 · 2~3층
-                </p>
-                <h2 className="text-3xl md:text-4xl font-extralight tracking-wide">복층 객실</h2>
-              </div>
-              <div className="mt-4 md:mt-0 md:text-right">
-                <p className="text-4xl font-extralight">
-                  500,000
-                  <span className="text-sm text-warm-400 ml-1 font-normal">원 / 1박</span>
-                </p>
-              </div>
-            </div>
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">객실 공간</h3>
+        <div className="flex flex-wrap gap-3 mb-12">
+          {["침실(2)", "온돌방(1)", "화장실(3)", "거실(1)", "주방(1)"].map((item) => (
+            <span key={item} className="px-4 py-2 bg-neutral-100 text-sm text-neutral-700 rounded">{item}</span>
+          ))}
+        </div>
 
-            <div className="flex items-center gap-4 mb-12 ornament">
-              <div className="w-1.5 h-1.5 rotate-45 border border-warm-300" />
-            </div>
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">편의시설</h3>
+        <div className="flex flex-wrap gap-3 mb-12">
+          {["드레스룸", "빔프로젝터", "불멍(가습)", "테라스", "세탁기/건조기", "식기세척기"].map((item) => (
+            <span key={item} className="px-4 py-2 bg-black text-sm text-white rounded">{item}</span>
+          ))}
+        </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-              <div>
-                <RoomSpec icon={<IconUsers className="w-4 h-4" />} label="인원" value="기준 4명 (최대 8명)" />
-                <RoomSpec icon={<IconArea className="w-4 h-4" />} label="면적" value="2F, 3F 각 82㎡" />
-                <RoomSpec icon={<IconClock className="w-4 h-4" />} label="체크인/아웃" value="15:00 / 11:00" />
-                <RoomSpec icon={<IconBed className="w-4 h-4" />} label="침대" value="라지킹 1 · 퀸 2" />
-                <RoomSpec icon={<IconBath className="w-4 h-4" />} label="화장실" value="3개" />
-                <RoomSpec icon={<IconLiving className="w-4 h-4" />} label="거실 / 주방" value="각 1개" />
+        <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-6">객실 용품</h3>
+        <AmenityGrid items={amenitiesB} />
 
-                <p className="text-[11px] text-warm-400 mt-6">
-                  추가 인원 인당 2만원 · 침구류 추가 2만원 · 온돌방 1개
-                </p>
-              </div>
-
-              <div className="space-y-10">
-                <div>
-                  <h3 className="text-[10px] tracking-[0.4em] uppercase text-warm-400 mb-5">
-                    주요 시설
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    <FacilityTag icon={<IconDress className="w-4 h-4" />} label="드레스룸" />
-                    <FacilityTag icon={<IconProjector className="w-4 h-4" />} label="빔프로젝터" />
-                    <FacilityTag icon={<IconFire className="w-4 h-4" />} label="불멍 (가습)" />
-                    <FacilityTag icon={<IconTerrace className="w-4 h-4" />} label="테라스" />
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-[10px] tracking-[0.4em] uppercase text-warm-400 mb-5">
-                    객실 용품
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {amenities.map((item) => (
-                      <span key={item} className="tag-pill bg-warm-50 border border-warm-200 text-warm-600">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="mt-10 mb-16">
+          <p className="text-center text-sm text-neutral-400">현재 일시 운영중단 상태입니다</p>
         </div>
       </div>
-    </ScrollReveal>
+    </div>
   );
 }
 
 export default function RoomsPage() {
+  const [room, setRoom] = useState<"a" | "b">("a");
+
   return (
-    <>
-      <PageHero label="Rooms" title="객실 안내" subtitle="두 가지 컨셉의 프라이빗 공간" />
-      <section className="py-28 md:py-36 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto space-y-24">
-          <RoomA />
-          <RoomB />
+    <div className="pt-24">
+      {/* Back + tab */}
+      <div className="max-w-[1280px] mx-auto px-4 md:px-0 mb-10">
+        <a href="/" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-black transition-colors mb-8">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          돌아가기
+        </a>
+
+        <div className="flex gap-0 border-b border-neutral-200">
+          <button
+            onClick={() => setRoom("a")}
+            className={`px-5 py-3 text-base transition-colors relative ${
+              room === "a" ? "text-black font-medium" : "text-neutral-400"
+            }`}
+          >
+            A타입
+            {room === "a" && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />}
+          </button>
+          <button
+            onClick={() => setRoom("b")}
+            className={`px-5 py-3 text-base transition-colors relative ${
+              room === "b" ? "text-black font-medium" : "text-neutral-400"
+            }`}
+          >
+            B타입
+            <span className="ml-2 text-xs text-neutral-400">SOLD OUT</span>
+            {room === "b" && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />}
+          </button>
         </div>
-      </section>
-    </>
+      </div>
+
+      {room === "a" ? <RoomA /> : <RoomB />}
+    </div>
   );
 }
