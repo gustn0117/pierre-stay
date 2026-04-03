@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import ScrollGallery from "@/components/ScrollGallery";
 import {
   IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
   IconAC, IconToaster, IconMicrowave, IconInduction, IconUtensils,
@@ -132,19 +133,7 @@ function PointSection({
 }) {
   return (
     <section id={id} className="flex flex-col" style={{ gap: 48, marginTop: 160 }}>
-      {/* Gallery - overflow scroll with side padding */}
-      <div
-        className="overflow-x-scroll gallery-scroll"
-        style={{ overflowY: "hidden" }}
-      >
-        <div className="flex" style={{ gap: 40, padding: "0 260px", width: "max-content" }}>
-          {gallery.map((label, i) => (
-            <div key={i} className="shrink-0" style={{ width: 400, height: 400 }}>
-              <PlaceholderImage className="w-full h-full" label={label} />
-            </div>
-          ))}
-        </div>
-      </div>
+      <ScrollGallery items={gallery} itemWidth={400} itemHeight={400} gap={40} sidePadding={260} />
       {/* Text row */}
       <div className="max-w-[1280px] mx-auto w-full flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 px-4 md:px-0">
         <div className="flex flex-col shrink-0" style={{ width: 300, gap: 8 }}>
@@ -174,15 +163,8 @@ function RoomDetails() {
 
       {/* A타입 */}
       <div className="mb-16">
-        {/* Horizontal scroll images */}
-        <div className="overflow-x-scroll gallery-scroll mb-4" style={{ overflowY: "hidden" }}>
-          <div className="flex" style={{ gap: 8, width: "max-content" }}>
-            {["A타입 1", "A타입 2", "A타입 3", "A타입 4", "A타입 5"].map((label, i) => (
-              <div key={i} className="shrink-0">
-                <PlaceholderImage className="w-auto" style={{ width: 440, height: 668 }} label={label} />
-              </div>
-            ))}
-          </div>
+        <div className="mb-4">
+          <ScrollGallery items={["A타입 1", "A타입 2", "A타입 3", "A타입 4", "A타입 5"]} itemWidth={440} itemHeight={668} gap={8} sidePadding={0} />
         </div>
         <p style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">A타입 — 풀빌라 원룸</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-1 text-sm">
@@ -212,14 +194,8 @@ function RoomDetails() {
           </div>
         </div>
         <div className="room-b-content transition-all duration-500">
-          <div className="overflow-x-scroll gallery-scroll mb-4" style={{ overflowY: "hidden" }}>
-            <div className="flex" style={{ gap: 8, width: "max-content" }}>
-              {["B타입 1", "B타입 2", "B타입 3", "B타입 4", "B타입 5"].map((label, i) => (
-                <div key={i} className="shrink-0">
-                  <PlaceholderImage className="w-auto" style={{ width: 440, height: 668 }} label={label} />
-                </div>
-              ))}
-            </div>
+          <div className="mb-4">
+            <ScrollGallery items={["B타입 1", "B타입 2", "B타입 3", "B타입 4", "B타입 5"]} itemWidth={440} itemHeight={668} gap={8} sidePadding={0} />
           </div>
           <p style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">B타입 — 블랙&화이트 복층</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-1 text-sm">
