@@ -2,7 +2,7 @@
 
 @theme inline {
   --color-stone-850: #1f1a17;
-  --color-warm-50: #faf8f5;
+  --color-warm-50: #ffffff;
   --color-warm-100: #f5f0eb;
   --color-warm-200: #e8e0d8;
   --color-warm-300: #d4c8bb;
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background: #faf8f5;
+  background: #ffffff;
   color: #231f1b;
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -62,6 +62,15 @@ body {
   z-index: 10; pointer-events: none;
 }
 .room-b-card:hover .room-b-overlay { opacity: 1; }
+
+/* ── Gallery horizontal scroll ── */
+.gallery-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 3px; }

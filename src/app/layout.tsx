@@ -4,10 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: {
-    default: "PIERRE | 자연 속 프라이빗 스테이",
-    template: "%s | PIERRE",
-  },
+  title: "PIERRE | 자연 속 프라이빗 스테이",
   description:
     "서울 근교 용인에 자리한 PIERRE는 자연과 휴식이 만나 완성되는 풀빌라 스테이입니다.",
 };
