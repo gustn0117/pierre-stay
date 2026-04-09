@@ -17,7 +17,7 @@ function Hero() {
           Leisure and relaxation embraced by nature
         </p>
         <p style={{ fontSize: 26, fontWeight: 500 }} className="mb-16">
-          자연이 감싸는 여유와 휴식
+          자연 속에서 느끼는 여유와 휴식
         </p>
         {/* Logo placeholder */}
         <div className="mx-auto flex items-center justify-center" style={{ width: 335, height: 80 }}>
@@ -42,7 +42,7 @@ function RoomTypeSelector() {
         {/* Right cards */}
         <div className="flex-1 flex flex-col gap-10 px-4 md:px-0">
           {/* A타입 */}
-          <a href="/rooms" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 hover:border-neutral-400 transition-colors group">
+          <a href="/rooms?type=a" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 hover:border-neutral-400 transition-colors group">
             <div className="aspect-[16/9] md:aspect-auto">
               <div className="placeholder-image w-full h-full [&::after]:content-['A타입_PHOTO']" />
             </div>
@@ -59,8 +59,8 @@ function RoomTypeSelector() {
             </div>
           </a>
           {/* B타입 - sold out */}
-          <div className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative">
-            <div className="absolute inset-0 bg-white/50 z-10 flex items-center justify-center">
+          <a href="/rooms?type=b" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative hover:border-neutral-400 transition-colors group">
+            <div className="absolute inset-0 bg-white/50 z-20 flex items-center justify-center">
               <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
             </div>
             <div className="aspect-[16/9] md:aspect-auto">
@@ -72,8 +72,12 @@ function RoomTypeSelector() {
                 <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
                 <p className="text-2xl font-light text-black mt-4">500,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
               </div>
+              <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
+                자세히 보기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><polyline points="9 18 15 12 9 6" /></svg>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

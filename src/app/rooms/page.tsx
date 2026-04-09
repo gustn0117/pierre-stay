@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ScrollGallery from "@/components/ScrollGallery";
 import {
   IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
@@ -117,7 +118,7 @@ function RoomA() {
         <AmenityGrid items={amenitiesA} />
 
         <p className="mt-10 text-center text-sm text-neutral-400 py-4 border-t border-neutral-100">
-          1층 풀빌라 객실과 2·3층 복층 객실로 나뉘며, 풀 이용은 1층 객실 전용입니다
+          저희 피에르는 1층 풀빌라 객실과 2층 복층형 객실로 나뉘어져 있으며, 야외 수영장 이용은 1층 객실 전용입니다.
         </p>
 
         {/* 예약 CTA */}
@@ -196,7 +197,9 @@ function RoomB() {
 }
 
 export default function RoomsPage() {
-  const [room, setRoom] = useState<"a" | "b">("a");
+  const searchParams = useSearchParams();
+  const initialType = searchParams.get("type") === "b" ? "b" : "a";
+  const [room, setRoom] = useState<"a" | "b">(initialType);
 
   return (
     <div className="pt-24">
