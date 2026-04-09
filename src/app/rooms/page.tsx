@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import ScrollGallery from "@/components/ScrollGallery";
 import {
@@ -196,14 +196,13 @@ function RoomB() {
   );
 }
 
-export default function RoomsPage() {
+function RoomsContent() {
   const searchParams = useSearchParams();
   const initialType = searchParams.get("type") === "b" ? "b" : "a";
   const [room, setRoom] = useState<"a" | "b">(initialType);
 
   return (
     <div className="pt-24">
-      {/* Back + tab */}
       <div className="max-w-[1280px] mx-auto px-4 md:px-0 mb-10">
         <a href="/" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-black transition-colors mb-8">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -237,5 +236,13 @@ export default function RoomsPage() {
 
       {room === "a" ? <RoomA /> : <RoomB />}
     </div>
+  );
+}
+
+export default function RoomsPage() {
+  return (
+    <Suspense>
+      <RoomsContent />
+    </Suspense>
   );
 }
