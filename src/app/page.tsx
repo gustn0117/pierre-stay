@@ -10,7 +10,7 @@ import ScrollGallery from "@/components/ScrollGallery";
 function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center overflow-hidden" style={{ height: 800 }}>
-      <div className="absolute! inset-0 placeholder-image [&::after]:content-none" />
+      <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 text-center text-white">
         <p style={{ fontSize: 18, fontWeight: 500 }} className="mb-1">
