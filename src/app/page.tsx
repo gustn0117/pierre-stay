@@ -153,6 +153,34 @@ function PointSection({
 }
 
 /* ─────────────────────────────
+   Nearby Places
+   ───────────────────────────── */
+function NearbyPlaces() {
+  const places = [
+    { name: "에버랜드 / 캐리비안베이", time: "10분" },
+    { name: "한국민속촌", time: "30분" },
+    { name: "딥스테이션 다이빙", time: "10분" },
+    { name: "곤지암 / 지산스키장", time: "25분" },
+  ];
+
+  return (
+    <section className="max-w-[1280px] mx-auto px-4 md:px-0" style={{ marginTop: 160 }}>
+      <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black mb-10">
+        주변 추천 장소
+      </h4>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {places.map((place) => (
+          <div key={place.name} className="border border-neutral-200 p-5 hover:border-neutral-400 transition-colors">
+            <p className="text-sm font-medium text-black mb-2">{place.name}</p>
+            <p className="text-xs text-neutral-400">차량 {place.time}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────
    7. Info Tabs  (flexDir:column, gap:8px, tab bar + content)
    ───────────────────────────── */
 function InfoTabs() {
@@ -317,6 +345,7 @@ export default function Home() {
         gallery={["복층 1", "복층 2", "복층 3", "복층 4"]}
         text="PIERRE의 2,3층 복층 객실은 블랙&화이트 컨셉으로 디자인되어, 아늑한 1층 풀빌라와는 또 다른 묵직하고 세련된 감성을 제공합니다. 모던한 컬러와 심플한 구조 속에서 공간의 선과 질감이 더욱 돋보이며 차분하면서도 고급스러운 분위기를 느끼실 수 있습니다. 복층 구조로 설계되어 개인 공간과 휴식 공간이 자연스럽게 분리되어 있어 연인이나 친구, 가족 모두에게 편안한 스테이를 제공합니다. PIERRE에서만 만날 수 있는, 자연 속 프라이빗 스테이로 여러분을 초대합니다."
       />
+      <NearbyPlaces />
       <InfoTabs />
     </>
   );
