@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand */}
           <div className="md:col-span-5">
-            <p className="text-3xl tracking-[0.35em] text-white font-extralight mb-3">
+            <p className="text-3xl tracking-[0.15em] text-white font-logo mb-3">
               PIERRE
             </p>
             <div className="w-8 h-px bg-warm-700 mb-5" />

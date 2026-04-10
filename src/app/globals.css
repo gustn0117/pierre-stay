@@ -17,6 +17,7 @@
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", sans-serif;
   --font-serif: "Noto Serif KR", Georgia, "Times New Roman", serif;
+  --font-logo: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 html {

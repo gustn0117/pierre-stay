@@ -31,7 +31,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
             href="#"
-            className={`text-xl tracking-[0.3em] font-extralight transition-colors duration-700 ${
+            className={`text-xl tracking-[0.15em] font-logo font-normal transition-colors duration-700 ${
               scrolled ? "text-warm-900" : "text-white"
             }`}
           >

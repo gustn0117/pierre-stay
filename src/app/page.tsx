@@ -21,7 +21,7 @@ function Hero() {
         </p>
         {/* Logo placeholder */}
         <div className="mx-auto flex items-center justify-center" style={{ width: 335, height: 80 }}>
-          <span className="text-5xl font-light tracking-[0.3em] text-white">PIERRE</span>
+          <span className="text-5xl font-logo tracking-[0.15em] text-white">PIERRE</span>
         </div>
       </div>
     </section>
