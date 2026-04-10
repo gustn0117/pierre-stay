@@ -78,6 +78,12 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d4c8bb; border-radius: 2px; }
 
+/* ── Hero scale-in ── */
+@keyframes heroScaleIn {
+  from { transform: scale(1.15); }
+  to { transform: scale(1); }
+}
+
 /* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
