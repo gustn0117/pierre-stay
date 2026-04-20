@@ -233,7 +233,43 @@ function InfoTabs() {
               <p className="text-neutral-400 text-sm">도로명: 경기도 용인시 모현읍 곡현로 485번길 31-7</p>
               <p><a href="tel:010-3542-8138" className="hover:underline">010-3542-8138</a></p>
               <p><a href="mailto:mocacia@naver.com" className="hover:underline">mocacia@naver.com</a></p>
-              <div className="placeholder-image w-full h-72 rounded mt-6" />
+              <div className="w-full h-72 md:h-96 rounded overflow-hidden mt-6 border border-neutral-200">
+                <iframe
+                  src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EB%AA%A8%ED%98%84%EC%9D%8D%20%EA%B3%A1%ED%98%84%EB%A1%9C%20485%EB%B2%88%EA%B8%B8%2031-7&output=embed&hl=ko"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="PIERRE 위치"
+                />
+              </div>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <a
+                  href="https://map.kakao.com/link/search/경기도 용인시 모현읍 곡현로 485번길 31-7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 text-sm border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  카카오맵에서 보기
+                </a>
+                <a
+                  href="https://map.naver.com/v5/search/경기도 용인시 모현읍 곡현로 485번길 31-7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 text-sm border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  네이버지도에서 보기
+                </a>
+                <a
+                  href="https://maps.google.com/?q=경기도 용인시 모현읍 곡현로 485번길 31-7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 text-sm border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  구글맵에서 보기
+                </a>
+              </div>
             </div>
           )}
           {tab === "rules" && (
