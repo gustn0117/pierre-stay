@@ -15,11 +15,11 @@ function Hero() {
         <img src="/hero-mobile.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover object-center md:object-contain" />
       </picture>
       <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 text-center text-white px-6 translate-y-[2cm] md:-translate-y-[1cm]">
+      <div className="relative z-10 text-center text-white px-6 md:-translate-y-[1cm]">
         <p className="mb-2" style={{ fontSize: "clamp(14px, 2.2vw, 18px)", fontWeight: 500 }}>
           Leisure and relaxation embraced by nature
         </p>
-        <p className="mb-10 md:mb-16" style={{ fontSize: "clamp(18px, 3.2vw, 26px)", fontWeight: 500 }}>
+        <p className="mb-4 md:mb-16" style={{ fontSize: "clamp(18px, 3.2vw, 26px)", fontWeight: 500 }}>
           자연 속에서 느끼는 여유와 휴식
         </p>
         <div className="mx-auto flex items-center justify-center">
