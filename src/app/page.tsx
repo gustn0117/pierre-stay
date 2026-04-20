@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import ScrollGallery from "@/components/ScrollGallery";
 
 /* ─────────────────────────────
@@ -143,7 +142,7 @@ function PointSection({
 }) {
   return (
     <section id={id} className="flex flex-col" style={{ gap: 48, marginTop: 160 }}>
-      <ScrollGallery items={gallery} itemWidth={400} itemHeight={400} gap={40} sidePadding={260} />
+      <ScrollGallery items={gallery} itemWidth={400} itemHeight={400} gap={40} sidePadding={260} alt={title} />
       {/* Text row */}
       <div className="max-w-[1280px] mx-auto w-full flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 px-4 md:px-0">
         <div className="flex flex-col shrink-0" style={{ width: 300, gap: 8 }}>

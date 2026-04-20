@@ -23,6 +23,7 @@ export default function ScrollGallery({
   const ref = useRef<HTMLDivElement>(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const checkScroll = useCallback(() => {
     const el = ref.current;
@@ -34,15 +35,28 @@ export default function ScrollGallery({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const mq = window.matchMedia("(max-width: 767px)");
+    const onMq = () => setIsMobile(mq.matches);
+    onMq();
+    mq.addEventListener("change", onMq);
     checkScroll();
     el.addEventListener("scroll", checkScroll, { passive: true });
-    return () => el.removeEventListener("scroll", checkScroll);
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      mq.removeEventListener("change", onMq);
+    };
   }, [checkScroll]);
+
+  const effectivePadding = isMobile ? Math.min(sidePadding, 16) : sidePadding;
+  const effectiveWidth = isMobile && itemWidth > 320 ? Math.min(itemWidth, 320) : itemWidth;
+  const effectiveHeight = isMobile && itemWidth > 320
+    ? Math.round((itemHeight * effectiveWidth) / itemWidth)
+    : itemHeight;
 
   const scroll = (dir: "left" | "right") => {
     const el = ref.current;
     if (!el) return;
-    const amount = itemWidth + gap;
+    const amount = effectiveWidth + gap;
     el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
   };
 
@@ -82,10 +96,10 @@ export default function ScrollGallery({
       >
         <div
           className="flex"
-          style={{ gap, padding: `0 ${sidePadding}px`, width: "max-content" }}
+          style={{ gap, padding: `0 ${effectivePadding}px`, width: "max-content" }}
         >
           {items.map((item, i) => (
-            <div key={i} className="shrink-0" style={{ width: itemWidth, height: itemHeight }}>
+            <div key={i} className="shrink-0" style={{ width: effectiveWidth, height: effectiveHeight }}>
               {item.startsWith("/") ? (
                 <img
                   src={item}
