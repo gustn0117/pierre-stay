@@ -9,8 +9,8 @@ import ScrollGallery from "@/components/ScrollGallery";
    ───────────────────────────── */
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-[1393/907] md:aspect-auto md:h-[800px]">
-      <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-contain md:object-cover md:object-[center_35%]" />
+    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-[1393/907]">
+      <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-contain" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 text-center text-white mt-12 md:mt-0 px-6 -translate-y-[1cm]">
         <p className="mb-2" style={{ fontSize: "clamp(14px, 2.2vw, 18px)", fontWeight: 500 }}>
