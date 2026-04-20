@@ -1,17 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "소개", href: "#about" },
-  { label: "객실", href: "#rooms" },
-  { label: "안내사항", href: "#info" },
-  { label: "오시는 길", href: "#location" },
+  { label: "소개", href: "/#about" },
+  { label: "객실", href: "/#rooms" },
+  { label: "안내사항", href: "/#info" },
+  { label: "오시는 길", href: "/#location" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const light = !isHome || scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -22,7 +26,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
+        light
           ? "bg-warm-50/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.04)]"
           : "bg-transparent"
       }`}
@@ -30,9 +34,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
-            href="#"
+            href="/"
             className={`text-xl tracking-[0.15em] font-logo font-normal transition-colors duration-700 ${
-              scrolled ? "text-warm-900" : "text-white"
+              light ? "text-warm-900" : "text-white"
             }`}
           >
             PIERRE
@@ -45,7 +49,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-[11px] tracking-[0.2em] uppercase transition-colors duration-500 ${
-                  scrolled
+                  light
                     ? "text-warm-500 hover:text-warm-900"
                     : "text-white/70 hover:text-white"
                 }`}
@@ -64,12 +68,12 @@ export default function Header() {
             <span
               className={`block w-5 h-px transition-all duration-500 origin-center ${
                 menuOpen ? "rotate-45 translate-y-[4px]" : ""
-              } ${scrolled ? "bg-warm-900" : "bg-white"}`}
+              } ${light ? "bg-warm-900" : "bg-white"}`}
             />
             <span
               className={`block w-5 h-px transition-all duration-500 origin-center ${
                 menuOpen ? "-rotate-45 -translate-y-[4px]" : ""
-              } ${scrolled ? "bg-warm-900" : "bg-white"}`}
+              } ${light ? "bg-warm-900" : "bg-white"}`}
             />
           </button>
         </div>
