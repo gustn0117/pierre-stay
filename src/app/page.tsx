@@ -9,13 +9,13 @@ import ScrollGallery from "@/components/ScrollGallery";
    ───────────────────────────── */
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 h-[85vh] min-h-[500px] md:h-auto md:aspect-[1393/907]">
+    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 h-[90vh] min-h-[560px] md:h-auto md:aspect-[1393/907]">
       <picture>
         <source media="(min-width: 768px)" srcSet="/hero.jpg" />
-        <img src="/hero-mobile.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-contain" />
+        <img src="/hero-mobile.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover object-center md:object-contain" />
       </picture>
       <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 text-center text-white mt-12 md:mt-0 px-6 -translate-y-[1cm]">
+      <div className="relative z-10 text-center text-white mt-4 md:mt-0 px-6 -translate-y-[2cm] md:-translate-y-[1cm]">
         <p className="mb-2" style={{ fontSize: "clamp(14px, 2.2vw, 18px)", fontWeight: 500 }}>
           Leisure and relaxation embraced by nature
         </p>
