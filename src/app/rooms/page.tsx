@@ -197,7 +197,7 @@ function RoomB() {
 
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">객실 공간</h3>
         <div className="flex flex-wrap gap-3 mb-12">
-          {["침실(2)", "온돌방(1)", "화장실(3)", "거실(1)", "주방(1)", "욕조(1)"].map((item) => (
+          {["침실(2)", "온돌방(1)", "화장실(3)", "거실(1)", "주방(1)", "욕조(1)", "드레스룸(1)"].map((item) => (
             <span key={item} className="px-4 py-2 bg-neutral-100 text-sm text-neutral-700 rounded">{item}</span>
           ))}
         </div>
