@@ -9,8 +9,8 @@ import ScrollGallery from "@/components/ScrollGallery";
    ───────────────────────────── */
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden h-[60vw] min-h-[400px] max-h-[800px]">
-      <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_60%]" />
+    <section className="relative flex flex-col items-center justify-center overflow-hidden aspect-[1393/907] md:aspect-auto md:h-[800px]">
+      <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover md:object-[center_35%]" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 text-center text-white mt-12 md:mt-0">
         <p className="text-sm md:text-lg mb-1" style={{ fontWeight: 500 }}>
@@ -50,7 +50,11 @@ function RoomTypeSelector() {
               <div>
                 <p className="text-base font-semibold text-black mb-1">A타입</p>
                 <p className="text-sm text-neutral-500">기준 2인(최대 6인)</p>
-                <p className="text-2xl font-light text-black mt-4">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <div className="mt-4 flex items-baseline gap-3">
+                  <span className="text-sm text-neutral-400 line-through">450,000원</span>
+                  <span className="text-xs px-2 py-0.5 bg-black text-white">오픈행사</span>
+                </div>
+                <p className="text-2xl font-light text-black mt-1">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
                 자세히 보기
@@ -60,17 +64,19 @@ function RoomTypeSelector() {
           </a>
           {/* B타입 - sold out */}
           <a href="/rooms?type=b" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative hover:border-neutral-400 transition-colors group">
-            <div className="absolute inset-0 bg-white/50 z-20 flex items-center justify-center">
-              <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
-            </div>
-            <div className="aspect-[16/9] md:aspect-auto">
+            {/* SOLD OUT overlay on image only */}
+            <div className="relative aspect-[16/9] md:aspect-auto">
               <div className="placeholder-image w-full h-full [&::after]:content-['B타입_PHOTO']" />
+              <div className="absolute inset-0 bg-white/40 flex items-center justify-center">
+                <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
+              </div>
             </div>
             <div className="p-6 flex flex-col justify-between">
               <div>
                 <p className="text-base font-semibold text-black mb-1">B타입</p>
                 <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
                 <p className="text-2xl font-light text-black mt-4">500,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <p className="text-xs text-neutral-400 mt-1">* 성수기 요금 별도</p>
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
                 자세히 보기

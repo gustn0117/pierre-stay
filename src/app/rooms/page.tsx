@@ -75,13 +75,19 @@ function RoomA() {
         <p className="text-sm text-neutral-500 mb-8">1층 전용 프라이빗 수영장과 포인트존을 갖춘 원룸형 객실</p>
 
         {/* Price */}
-        <div className="flex items-end gap-2 mb-10 pb-8 border-b border-neutral-200">
-          <span className="text-4xl font-light text-black">350,000</span>
-          <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
+        <div className="mb-10 pb-8 border-b border-neutral-200">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-lg text-neutral-400 line-through">450,000원</span>
+            <span className="text-xs px-2 py-0.5 bg-black text-white tracking-wider">오픈행사</span>
+          </div>
+          <div className="flex items-end gap-2">
+            <span className="text-4xl font-light text-black">350,000</span>
+            <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
+          </div>
         </div>
 
         {/* Specs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-6">
           {[
             ["기준 인원", "2명 (최대 6명)"],
             ["추가 인원", "인당 2만원"],
@@ -95,6 +101,21 @@ function RoomA() {
               <span className="text-neutral-700">{value}</span>
             </div>
           ))}
+        </div>
+
+        {/* 주말 요금 */}
+        <div className="bg-neutral-50 border border-neutral-100 p-5 mb-12">
+          <p className="text-sm font-semibold text-black mb-3">주말 요금</p>
+          <div className="space-y-1.5 text-sm text-neutral-700">
+            <div className="flex justify-between">
+              <span className="text-neutral-500">금, 토</span>
+              <span>+ 100,000원</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-neutral-500">일요일</span>
+              <span>+ 50,000원</span>
+            </div>
+          </div>
         </div>
 
         {/* 객실 공간 */}
@@ -150,9 +171,12 @@ function RoomB() {
         </div>
         <p className="text-sm text-neutral-500 mb-8">모던한 블랙&화이트 컨셉의 2~3층 복층 객실</p>
 
-        <div className="flex items-end gap-2 mb-10 pb-8 border-b border-neutral-200">
-          <span className="text-4xl font-light text-black">500,000</span>
-          <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
+        <div className="mb-10 pb-8 border-b border-neutral-200">
+          <div className="flex items-end gap-2">
+            <span className="text-4xl font-light text-black">500,000</span>
+            <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
+          </div>
+          <p className="text-xs text-neutral-400 mt-2">* 성수기 요금 별도</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-12">
