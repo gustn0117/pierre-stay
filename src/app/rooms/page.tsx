@@ -104,12 +104,16 @@ function RoomA() {
           ))}
         </div>
 
-        {/* 주말 요금 */}
+        {/* 추가 요금 */}
         <div className="bg-neutral-50 border border-neutral-100 p-5 mb-12">
-          <p className="text-sm font-semibold text-black mb-3">주말 요금</p>
+          <p className="text-sm font-semibold text-black mb-3">추가 요금</p>
           <div className="space-y-1.5 text-sm text-neutral-700">
             <div className="flex justify-between">
-              <span className="text-neutral-500">금, 토</span>
+              <span className="text-neutral-500">온수풀 이용</span>
+              <span>+ 100,000원</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-neutral-500">금, 토 (주말요금)</span>
               <span>+ 100,000원</span>
             </div>
             <div className="flex justify-between">
