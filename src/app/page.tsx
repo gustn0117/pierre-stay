@@ -12,16 +12,15 @@ function Hero() {
     <section className="relative flex flex-col items-center justify-center overflow-hidden h-[85vh] min-h-[500px] md:h-[800px] md:min-h-0">
       <img src="/hero.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_35%]" />
       <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 text-center text-white mt-12 md:mt-0">
-        <p className="text-sm md:text-lg mb-1" style={{ fontWeight: 500 }}>
+      <div className="relative z-10 text-center text-white mt-12 md:mt-0 px-6">
+        <p className="mb-2" style={{ fontSize: "clamp(14px, 2.2vw, 18px)", fontWeight: 500 }}>
           Leisure and relaxation embraced by nature
         </p>
-        <p className="text-base md:text-2xl mb-10 md:mb-16" style={{ fontWeight: 500 }}>
+        <p className="mb-10 md:mb-16" style={{ fontSize: "clamp(18px, 3.2vw, 26px)", fontWeight: 500 }}>
           자연 속에서 느끼는 여유와 휴식
         </p>
-        {/* Logo placeholder */}
         <div className="mx-auto flex items-center justify-center">
-          <span className="text-3xl md:text-5xl font-logo tracking-[0.15em] text-white">PIERRE</span>
+          <span className="font-logo tracking-[0.15em] text-white" style={{ fontSize: "clamp(32px, 6vw, 48px)" }}>PIERRE</span>
         </div>
       </div>
     </section>
