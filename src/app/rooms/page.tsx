@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import ScrollGallery from "@/components/ScrollGallery";
 import {
   IconHairdryer, IconCoffee, IconDispenser, IconFridge, IconTV,
@@ -227,10 +226,13 @@ function RoomB() {
   );
 }
 
-function RoomsContent() {
-  const searchParams = useSearchParams();
-  const initialType = searchParams.get("type") === "b" ? "b" : "a";
-  const [room, setRoom] = useState<"a" | "b">(initialType);
+export default function RoomsPage() {
+  const [room, setRoom] = useState<"a" | "b">("a");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("type") === "b") setRoom("b");
+  }, []);
 
   return (
     <div className="pt-24">
@@ -270,10 +272,3 @@ function RoomsContent() {
   );
 }
 
-export default function RoomsPage() {
-  return (
-    <Suspense>
-      <RoomsContent />
-    </Suspense>
-  );
-}
