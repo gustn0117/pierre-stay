@@ -9,6 +9,7 @@ interface Props {
   itemHeight: number;
   gap?: number;
   sidePadding?: number;
+  alt?: string;
 }
 
 export default function ScrollGallery({
@@ -17,6 +18,7 @@ export default function ScrollGallery({
   itemHeight,
   gap = 40,
   sidePadding = 260,
+  alt = "photo",
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [canLeft, setCanLeft] = useState(false);
@@ -82,9 +84,18 @@ export default function ScrollGallery({
           className="flex"
           style={{ gap, padding: `0 ${sidePadding}px`, width: "max-content" }}
         >
-          {items.map((label, i) => (
+          {items.map((item, i) => (
             <div key={i} className="shrink-0" style={{ width: itemWidth, height: itemHeight }}>
-              <PlaceholderImage className="w-full h-full" label={label} />
+              {item.startsWith("/") ? (
+                <img
+                  src={item}
+                  alt={`${alt} ${i + 1}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              ) : (
+                <PlaceholderImage className="w-full h-full" label={item} />
+              )}
             </div>
           ))}
         </div>

@@ -63,11 +63,12 @@ function RoomA() {
     <div>
       {/* Gallery */}
       <ScrollGallery
-        items={["A타입 1", "A타입 2", "A타입 3", "A타입 4", "A타입 5"]}
+        items={["/photos/a/main.jpg", "/photos/a/2.jpg", "/photos/a/3.jpg", "/photos/a/4.jpg", "/photos/a/5.jpg", "/photos/a/6.jpg", "/photos/a/7.jpg", "/photos/a/8.jpg"]}
         itemWidth={440}
         itemHeight={668}
         gap={8}
         sidePadding={0}
+        alt="A타입"
       />
 
       <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">
@@ -162,11 +163,12 @@ function RoomB() {
   return (
     <div>
       <ScrollGallery
-        items={["B타입 1", "B타입 2", "B타입 3", "B타입 4", "B타입 5"]}
+        items={["/photos/b/main.jpg", "/photos/b/1.jpg", "/photos/b/2.jpg", "/photos/b/2-2.jpg", "/photos/b/3.jpg", "/photos/b/4.jpg", "/photos/b/5.jpg", "/photos/b/6.jpg", "/photos/b/7.jpg", "/photos/b/8.jpg", "/photos/b/9.jpg"]}
         itemWidth={440}
         itemHeight={668}
         gap={8}
         sidePadding={0}
+        alt="B타입"
       />
 
       <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">

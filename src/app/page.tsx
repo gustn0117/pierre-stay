@@ -46,7 +46,7 @@ function RoomTypeSelector() {
           {/* A타입 */}
           <a href="/rooms?type=a" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 hover:border-neutral-400 transition-colors group">
             <div className="aspect-[16/9] md:aspect-auto">
-              <div className="placeholder-image w-full h-full [&::after]:content-['A타입_PHOTO']" />
+              <img src="/photos/a/main.jpg" alt="A타입 풀빌라 원룸" className="w-full h-full object-cover" />
             </div>
             <div className="p-6 flex flex-col justify-between">
               <div>
@@ -69,7 +69,7 @@ function RoomTypeSelector() {
           <a href="/rooms?type=b" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative hover:border-neutral-400 transition-colors group">
             {/* SOLD OUT overlay on image only */}
             <div className="relative aspect-[16/9] md:aspect-auto">
-              <div className="placeholder-image w-full h-full [&::after]:content-['B타입_PHOTO']" />
+              <img src="/photos/b/main.jpg" alt="B타입 복층" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-white/40 flex items-center justify-center">
                 <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
               </div>
@@ -103,7 +103,7 @@ function IntroSection() {
         <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black">
           자연의 결을 담은 쉼, PIERRE
         </h4>
-        <PlaceholderImage className="w-full" style={{ height: 700 }} />
+        <img src="/photos/intro.jpg" alt="자연의 결을 담은 쉼" className="w-full object-cover" style={{ height: 700 }} />
         <p style={{ fontSize: 16, lineHeight: "32px" }} className="text-black">
           PIERRE는 프랑스어로 &lsquo;돌&rsquo; 또는 &lsquo;암석&rsquo;을 의미합니다.
           단단하면서도 자연스러운 형태를 가진 돌처럼 저희 피에르는 견고함과 편안함, 그리고
@@ -340,19 +340,19 @@ export default function Home() {
         id="about"
         num={1}
         title="바람과 햇살이 머무는 곳"
-        gallery={["포인트존 1", "포인트존 2", "포인트존 3", "포인트존 4"]}
+        gallery={["/photos/p1/1.jpg", "/photos/p1/2.jpg", "/photos/p1/3.jpg", "/photos/p1/4.jpg", "/photos/p1/5.jpg", "/photos/p1/6.jpg", "/photos/p1/7.jpg", "/photos/p1/8.jpg"]}
         text="포인트존 공간은 '암석'을 모티브로 디자인 되었으며 거친 듯 자연스러운 돌의 질감은 눈으로 보는 순간 강렬한 존재감을 주면서도 동시에 마음을 차분하게 안정시키는 힘이 있습니다. 햇살과 그림자가 포인트존 위를 스칠 때마다, 마치 자연 속에서 시간을 멈춘 듯한 여유를 느끼실 수 있습니다. 돌이 주는 감성은 단순히 시각적 아름다움에 머물지 않습니다. 그 위에 앉거나 기대어 있으면 돌의 견고함이 주는 안정감과 함께 마음 속 긴장이 자연스럽게 풀립니다. 거기에 풀빌라의 프라이빗 수영장과 조화를 이루면 몸과 마음이 완전히 자연과 연결되는 경험을 제공합니다."
       />
       <PointSection
         num={2}
         title="온기가 머무는 공간"
-        gallery={["풀빌라 1", "풀빌라 2", "풀빌라 3", "풀빌라 4"]}
+        gallery={["/photos/p2/1.jpg", "/photos/p2/2.jpg", "/photos/p2/3.jpg", "/photos/p2/4.jpg", "/photos/p2/5.jpg", "/photos/p2/6.jpg", "/photos/p2/7.jpg", "/photos/p2/8.jpg", "/photos/p2/9.jpg"]}
         text="서울 근교 용인에 자리한 PIERRE는 자연과 휴식이 만나 완성되는 공간입니다. 견고하면서도 세련된 암석의 아름다움을 그대로 재현한 포인트존은 단순한 장식이 아닌 공간의 중심을 경험으로 자리합니다. 1층 풀빌라 객실에서는 프라이빗 수영장과 함께 포인트존을 마음껏 즐길 수 있으며 2~3층 복층 객실에서는 또 다른 감각적 분위기와 함께 자연 속 여유를 만끽할 수 있습니다. 모든 객실은 자연과 조화를 이루는 디자인으로, 머무는 순간마다 편안함과 평온함을 느낄 수 있도록 설계 되었습니다. 여유로운 햇살 아래 선베드에서 휴식을 즐기고, 맑은 공기 속 수영장과 포인트존에서 특별한 경험을 누리세요."
       />
       <PointSection
         num={3}
         title="모노톤의 미학"
-        gallery={["복층 1", "복층 2", "복층 3", "복층 4"]}
+        gallery={["/photos/p3/1.jpg", "/photos/p3/2.jpg", "/photos/p3/3.jpg", "/photos/p3/4.jpg", "/photos/p3/5.jpg", "/photos/p3/6.jpg", "/photos/p3/7.jpg", "/photos/p3/8.jpg", "/photos/p3/9.jpg", "/photos/p3/10.jpg"]}
         text="PIERRE의 2,3층 복층 객실은 블랙&화이트 컨셉으로 디자인되어, 아늑한 1층 풀빌라와는 또 다른 묵직하고 세련된 감성을 제공합니다. 모던한 컬러와 심플한 구조 속에서 공간의 선과 질감이 더욱 돋보이며 차분하면서도 고급스러운 분위기를 느끼실 수 있습니다. 복층 구조로 설계되어 개인 공간과 휴식 공간이 자연스럽게 분리되어 있어 연인이나 친구, 가족 모두에게 편안한 스테이를 제공합니다. PIERRE에서만 만날 수 있는, 자연 속 프라이빗 스테이로 여러분을 초대합니다."
       />
       <NearbyPlaces />
