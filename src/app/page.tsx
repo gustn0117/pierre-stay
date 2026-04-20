@@ -54,6 +54,7 @@ function RoomTypeSelector() {
                   <span className="text-xs px-2 py-0.5 bg-black text-white">오픈행사</span>
                 </div>
                 <p className="text-2xl font-light text-black mt-1">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <p className="text-xs text-neutral-400 mt-1">* 성수기 요금 별도</p>
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
                 자세히 보기

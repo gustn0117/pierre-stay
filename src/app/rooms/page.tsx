@@ -84,6 +84,7 @@ function RoomA() {
             <span className="text-4xl font-light text-black">350,000</span>
             <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
           </div>
+          <p className="text-xs text-neutral-400 mt-2">* 성수기 요금 별도</p>
         </div>
 
         {/* Specs */}
