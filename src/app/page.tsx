@@ -167,6 +167,7 @@ function NearbyPlaces() {
     { name: "한국민속촌", time: "30분" },
     { name: "딥스테이션 다이빙", time: "10분" },
     { name: "곤지암 / 지산스키장", time: "25분" },
+    { name: "화담숲", time: "30분" },
   ];
 
   return (
