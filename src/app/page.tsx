@@ -375,13 +375,13 @@ export default function Home() {
         id="about"
         num={1}
         title="바람과 햇살이 머무는 곳"
-        gallery={["/photos/p1/1.jpg", "/photos/p1/2.jpg", "/photos/p1/3.jpg", "/photos/p1/4.jpg", "/photos/p1/5.jpg", "/photos/p1/6.jpg", "/photos/p1/7.jpg", "/photos/p1/8.jpg"]}
+        gallery={["/photos/p1/1.jpg", "/photos/p1/2.jpg", "/photos/p1/5.jpg", "/photos/p1/6.jpg", "/photos/p1/7.jpg", "/photos/p1/8.jpg"]}
         text="포인트존 공간은 '암석'을 모티브로 디자인 되었으며 거친 듯 자연스러운 돌의 질감은 눈으로 보는 순간 강렬한 존재감을 주면서도 동시에 마음을 차분하게 안정시키는 힘이 있습니다. 햇살과 그림자가 포인트존 위를 스칠 때마다, 마치 자연 속에서 시간을 멈춘 듯한 여유를 느끼실 수 있습니다. 돌이 주는 감성은 단순히 시각적 아름다움에 머물지 않습니다. 그 위에 앉거나 기대어 있으면 돌의 견고함이 주는 안정감과 함께 마음 속 긴장이 자연스럽게 풀립니다. 거기에 풀빌라의 프라이빗 수영장과 조화를 이루면 몸과 마음이 완전히 자연과 연결되는 경험을 제공합니다."
       />
       <PointSection
         num={2}
         title="온기가 머무는 공간"
-        gallery={["/photos/p2/1.jpg", "/photos/p2/2.jpg", "/photos/p2/3.jpg", "/photos/p2/4.jpg", "/photos/p2/5.jpg", "/photos/p2/6.jpg", "/photos/p2/7.jpg", "/photos/p2/8.jpg", "/photos/p2/9.jpg"]}
+        gallery={["/photos/p2/2.jpg", "/photos/p2/3.jpg", "/photos/p2/4.jpg", "/photos/p2/5.jpg", "/photos/p2/6.jpg", "/photos/p2/7.jpg", "/photos/p2/8.jpg", "/photos/p2/9.jpg"]}
         text="서울 근교 용인에 자리한 PIERRE는 자연과 휴식이 만나 완성되는 공간입니다. 견고하면서도 세련된 암석의 아름다움을 그대로 재현한 포인트존은 단순한 장식이 아닌 공간의 중심을 경험으로 자리합니다. 1층 풀빌라 객실에서는 프라이빗 수영장과 함께 포인트존을 마음껏 즐길 수 있으며 2~3층 복층 객실에서는 또 다른 감각적 분위기와 함께 자연 속 여유를 만끽할 수 있습니다. 모든 객실은 자연과 조화를 이루는 디자인으로, 머무는 순간마다 편안함과 평온함을 느낄 수 있도록 설계 되었습니다. 여유로운 햇살 아래 선베드에서 휴식을 즐기고, 맑은 공기 속 수영장과 포인트존에서 특별한 경험을 누리세요."
       />
       <PointSection

@@ -109,7 +109,7 @@ function RoomA() {
           <p className="text-sm font-semibold text-black mb-3">추가 요금</p>
           <div className="space-y-1.5 text-sm text-neutral-700">
             <div className="flex justify-between">
-              <span className="text-neutral-500">온수풀 이용</span>
+              <span className="text-neutral-500">수영장(온수풀) 이용</span>
               <span>+ 100,000원</span>
             </div>
             <div className="flex justify-between">
