@@ -384,7 +384,7 @@ export default function Home() {
       <PointSection
         num={2}
         title="온기가 머무는 공간"
-        gallery={["/photos/p2/8.jpg", "/photos/p2/7.jpg", "/photos/p2/6.jpg", "/photos/p2/5.jpg", "/photos/p2/4.jpg", "/photos/p2/3.jpg", "/photos/p2/2.jpg", "/photos/p2/1.jpg"]}
+        gallery={["/photos/p2/9.jpg", "/photos/p2/8.jpg", "/photos/p2/7.jpg", "/photos/p2/6.jpg", "/photos/p2/5.jpg", "/photos/p2/4.jpg", "/photos/p2/3.jpg", "/photos/p2/1.jpg"]}
         text="서울 근교 용인에 자리한 PIERRE는 자연과 휴식이 만나 완성되는 공간입니다. 견고하면서도 세련된 암석의 아름다움을 그대로 재현한 포인트존은 단순한 장식이 아닌 공간의 중심을 경험으로 자리합니다. 1층 풀빌라 객실에서는 프라이빗 수영장과 함께 포인트존을 마음껏 즐길 수 있으며 2~3층 복층 객실에서는 또 다른 감각적 분위기와 함께 자연 속 여유를 만끽할 수 있습니다. 모든 객실은 자연과 조화를 이루는 디자인으로, 머무는 순간마다 편안함과 평온함을 느낄 수 있도록 설계 되었습니다. 여유로운 햇살 아래 선베드에서 휴식을 즐기고, 맑은 공기 속 수영장과 포인트존에서 특별한 경험을 누리세요."
       />
       <PointSection
