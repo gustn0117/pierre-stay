@@ -8,7 +8,7 @@ import ScrollGallery from "@/components/ScrollGallery";
    ───────────────────────────── */
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-1600/1293 md:aspect-1393/907">
+    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-1066/1600 md:aspect-1393/907">
       <picture>
         <source media="(min-width: 768px)" srcSet="/hero.jpg" />
         <img src="/hero-mobile.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover" />
@@ -102,7 +102,10 @@ function IntroSection() {
         <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black">
           자연의 결을 담은 쉼, PIERRE
         </h4>
-        <img src="/photos/intro.jpg" alt="자연의 결을 담은 쉼" className="w-full object-cover" style={{ height: 700 }} />
+        <picture>
+          <source media="(min-width: 768px)" srcSet="/photos/intro.jpg" />
+          <img src="/photos/intro-mobile.jpg" alt="자연의 결을 담은 쉼" className="w-full object-cover md:h-[700px] h-[540px]" />
+        </picture>
         <p style={{ fontSize: 16, lineHeight: "32px" }} className="text-black">
           PIERRE는 프랑스어로 &lsquo;돌&rsquo; 또는 &lsquo;암석&rsquo;을 의미합니다.
           단단하면서도 자연스러운 형태를 가진 돌처럼 저희 피에르는 견고함과 편안함, 그리고
