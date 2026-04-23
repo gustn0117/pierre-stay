@@ -51,6 +51,22 @@ export default function Footer() {
                 mocacia@naver.com
               </a>
             </div>
+
+            <p className="text-[10px] tracking-[0.3em] uppercase text-warm-600 mt-8 mb-4">Follow</p>
+            <a
+              href="https://www.instagram.com/pierre__stay/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 text-sm text-warm-400 hover:text-white transition-colors group"
+              aria-label="PIERRE 인스타그램"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              @pierre__stay
+            </a>
           </div>
         </div>
       </div>
