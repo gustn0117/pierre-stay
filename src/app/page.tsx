@@ -8,7 +8,8 @@ import ScrollGallery from "@/components/ScrollGallery";
    ───────────────────────────── */
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-1066/1600 md:aspect-1393/907">
+    <section aria-label="메인 히어로" className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-1066/1600 md:aspect-1393/907">
+      <h1 className="sr-only">PIERRE 피에르 풀빌라 — 용인 프라이빗 풀빌라 스테이</h1>
       <picture>
         <source media="(min-width: 768px)" srcSet="/hero.jpg" />
         <img src="/hero-mobile.jpg" alt="PIERRE 풀빌라" className="absolute inset-0 w-full h-full object-cover" />
