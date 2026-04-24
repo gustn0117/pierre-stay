@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const SITE_URL = "https://pierre.hsweb.pics";
 const SITE_NAME = "PIERRE 풀빌라 스테이";
 const DESCRIPTION =
-  "용인 PIERRE는 자연과 휴식이 만나 완성되는 프라이빗 풀빌라 스테이입니다. 사계절 온수풀, 포인트존, 블랙&화이트 복층 객실까지. 서울 근교 용인에서 특별한 하루를 시작하세요.";
+  "용인 PIERRE 피에르 풀빌라 — 사계절 온수풀과 프라이빗 수영장을 갖춘 서울 근교 풀빌라 스테이.";
 const OG_IMAGE = `${SITE_URL}/hero.jpg`;
 
 export const metadata: Metadata = {
