@@ -60,7 +60,6 @@ function AmenityGrid({ items }: { items: { icon: React.ReactNode; label: string 
 function RoomA() {
   return (
     <div>
-      {/* Gallery */}
       <ScrollGallery
         items={["/photos/a/main.jpg", "/photos/a/1.jpg", "/photos/a/3.jpg", "/photos/a/5.jpg", "/photos/a/6.jpg", "/photos/a/7.jpg", "/photos/a/8.jpg", "/photos/a/9.jpg", "/photos/a/10.jpg", "/photos/a/11.jpg"]}
         itemWidth={440}
@@ -74,7 +73,6 @@ function RoomA() {
         <h1 style={{ fontSize: 28, fontWeight: 600 }} className="text-black mb-2">A타입 — 풀빌라 원룸</h1>
         <p className="text-sm text-neutral-500 mb-8">1층 전용 프라이빗 수영장과 포인트존을 갖춘 원룸형 객실</p>
 
-        {/* Price */}
         <div className="mb-10 pb-8 border-b border-neutral-200">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-lg text-neutral-400 line-through">450,000원</span>
@@ -87,7 +85,6 @@ function RoomA() {
           <p className="text-xs text-neutral-400 mt-2">* 성수기 요금 별도</p>
         </div>
 
-        {/* Specs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm mb-6">
           {[
             ["기준 인원", "2명 (최대 6명)"],
@@ -104,7 +101,6 @@ function RoomA() {
           ))}
         </div>
 
-        {/* 추가 요금 */}
         <div className="bg-neutral-50 border border-neutral-100 p-5 mb-12">
           <p className="text-sm font-semibold text-black mb-3">추가 요금</p>
           <div className="space-y-1.5 text-sm text-neutral-700">
@@ -123,7 +119,6 @@ function RoomA() {
           </div>
         </div>
 
-        {/* 객실 공간 */}
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">객실 공간</h3>
         <div className="flex flex-wrap gap-3 mb-12">
           {["침대(2)", "화장실(1)", "거실(1)", "주방(1)", "야외수영장"].map((item) => (
@@ -131,7 +126,6 @@ function RoomA() {
           ))}
         </div>
 
-        {/* 편의시설 */}
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">편의시설</h3>
         <div className="flex flex-wrap gap-3 mb-12">
           {["수영장(사계절 온수풀)", "선베드(2)", "야외테라스"].map((item) => (
@@ -139,7 +133,6 @@ function RoomA() {
           ))}
         </div>
 
-        {/* 객실 용품 */}
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-6">객실 용품</h3>
         <AmenityGrid items={amenitiesA} />
 
@@ -147,7 +140,6 @@ function RoomA() {
           저희 피에르는 1층 풀빌라 객실과 2층 복층형 객실로 나뉘어져 있으며, 야외 수영장 이용은 1층 객실 전용입니다.
         </p>
 
-        {/* 예약 CTA */}
         <div className="mt-8 mb-16">
           <a href="tel:010-3542-8138" className="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-sm w-full md:w-auto">
             예약문의 010-3542-8138

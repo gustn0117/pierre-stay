@@ -42,7 +42,6 @@ export default function Header() {
             PIERRE
           </a>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <a
@@ -59,7 +58,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden flex flex-col gap-1.5 p-2"
@@ -79,7 +77,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 bg-warm-50/95 backdrop-blur-xl ${
           menuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"

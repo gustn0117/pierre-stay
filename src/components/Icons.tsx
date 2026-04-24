@@ -220,8 +220,6 @@ export function IconWater({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-/* ── Amenity Icons ── */
-
 export function IconHairdryer({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

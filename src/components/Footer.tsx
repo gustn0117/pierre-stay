@@ -10,7 +10,6 @@ export default function Footer() {
     <footer className="bg-warm-900 text-warm-400">
       <div className="max-w-6xl mx-auto px-6 md:px-12 pt-20 pb-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          {/* Brand */}
           <div className="md:col-span-5">
             <p className="text-3xl tracking-[0.15em] text-white font-logo mb-3">
               PIERRE
@@ -23,7 +22,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Nav */}
           <div className="md:col-span-3">
             <p className="text-[10px] tracking-[0.3em] uppercase text-warm-600 mb-5">Menu</p>
             <nav className="space-y-3">
@@ -39,7 +37,6 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Contact */}
           <div className="md:col-span-4">
             <p className="text-[10px] tracking-[0.3em] uppercase text-warm-600 mb-5">Contact</p>
             <div className="space-y-2.5 text-sm">

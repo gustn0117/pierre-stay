@@ -62,7 +62,6 @@ export default function ScrollGallery({
 
   return (
     <div className="relative group/gallery">
-      {/* Left arrow */}
       <button
         onClick={() => scroll("left")}
         className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-white hover:scale-110 ${
@@ -75,7 +74,6 @@ export default function ScrollGallery({
         </svg>
       </button>
 
-      {/* Right arrow */}
       <button
         onClick={() => scroll("right")}
         className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-white hover:scale-110 ${
@@ -88,7 +86,6 @@ export default function ScrollGallery({
         </svg>
       </button>
 
-      {/* Scrollable area */}
       <div
         ref={ref}
         className="overflow-x-scroll gallery-scroll"

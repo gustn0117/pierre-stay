@@ -3,9 +3,6 @@
 import { useState } from "react";
 import ScrollGallery from "@/components/ScrollGallery";
 
-/* ─────────────────────────────
-   1. Hero  (h:800, bg image, centered text + logo)
-   ───────────────────────────── */
 function Hero() {
   return (
     <section aria-label="메인 히어로" className="relative flex flex-col items-center justify-center overflow-hidden bg-neutral-900 aspect-1066/1600 md:aspect-1393/907">
@@ -30,20 +27,14 @@ function Hero() {
   );
 }
 
-/* ─────────────────────────────
-   2. Room Type Selector  (flex-row: left "객실타입" label + right cards)
-   ───────────────────────────── */
 function RoomTypeSelector() {
   return (
     <section id="rooms" className="max-w-[1280px] mx-auto py-24">
       <div className="flex flex-col md:flex-row" style={{ gap: 0 }}>
-        {/* Left label */}
         <h4 className="shrink-0 text-base font-semibold text-black px-4 md:px-0 mb-4 md:mb-0" style={{ width: 83 }}>
           Type
         </h4>
-        {/* Right cards */}
         <div className="flex-1 flex flex-col gap-10 px-4 md:px-0">
-          {/* A타입 */}
           <a href="/rooms?type=a" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 hover:border-neutral-400 transition-colors group">
             <div className="aspect-[16/9] md:aspect-auto">
               <img src="/photos/a/main.jpg" alt="A타입 풀빌라 원룸" className="w-full h-full object-cover" />
@@ -65,9 +56,7 @@ function RoomTypeSelector() {
               </div>
             </div>
           </a>
-          {/* B타입 - sold out */}
           <a href="/rooms?type=b" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative hover:border-neutral-400 transition-colors group">
-            {/* SOLD OUT overlay on image only */}
             <div className="relative aspect-[16/9] md:aspect-auto">
               <img src="/photos/b/main.jpg" alt="B타입 복층" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-white/40 flex items-center justify-center">
@@ -93,9 +82,6 @@ function RoomTypeSelector() {
   );
 }
 
-/* ─────────────────────────────
-   3. Intro  (h4 24px/600 → full-width image h:700 → paragraph 16px/32px, gap:48px)
-   ───────────────────────────── */
 function IntroSection() {
   return (
     <section className="max-w-[1280px] mx-auto px-4 md:px-0 pt-12">
@@ -127,10 +113,6 @@ function IntroSection() {
   );
 }
 
-/* ─────────────────────────────
-   4. Point Section  (gallery: overflow scroll, padding 0 260px, gap 40px, 400x400)
-                     (text: flex justify-between, left 300px, right ~840px)
-   ───────────────────────────── */
 function PointSection({
   id,
   num,
@@ -147,7 +129,6 @@ function PointSection({
   return (
     <section id={id} className="flex flex-col" style={{ gap: 48, marginTop: 160 }}>
       <ScrollGallery items={gallery} itemWidth={400} itemHeight={400} gap={40} sidePadding={260} alt={title} />
-      {/* Text row */}
       <div className="max-w-[1280px] mx-auto w-full flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 px-4 md:px-0">
         <div className="flex flex-col shrink-0" style={{ width: 300, gap: 8 }}>
           <p style={{ fontSize: 18, fontWeight: 500, color: "rgb(146,146,146)" }}>Point {num}</p>
@@ -164,9 +145,6 @@ function PointSection({
   );
 }
 
-/* ─────────────────────────────
-   Nearby Places
-   ───────────────────────────── */
 function NearbyPlaces() {
   const places = [
     { name: "에버랜드 / 캐리비안베이", time: "10분" },
@@ -193,9 +171,6 @@ function NearbyPlaces() {
   );
 }
 
-/* ─────────────────────────────
-   7. Info Tabs  (flexDir:column, gap:8px, tab bar + content)
-   ───────────────────────────── */
 function InfoTabs() {
   const [tab, setTab] = useState<"location" | "rules" | "refund" | "safety">("location");
 
@@ -213,7 +188,6 @@ function InfoTabs() {
       </h4>
 
       <div className="flex flex-col" style={{ gap: 8 }}>
-        {/* Tab bar */}
         <div className="flex gap-0 border-b border-neutral-200">
           {tabs.map((t) => (
             <button
@@ -229,7 +203,6 @@ function InfoTabs() {
           ))}
         </div>
 
-        {/* Tab content */}
         <div className="pt-6 min-h-[400px]" style={{ fontSize: 16, lineHeight: "32px" }}>
           {tab === "location" && (
             <div id="location" className="text-neutral-700 space-y-2">
@@ -366,9 +339,6 @@ function InfoTabs() {
   );
 }
 
-/* ─────────────────────────────
-   Page
-   ───────────────────────────── */
 export default function Home() {
   return (
     <>
