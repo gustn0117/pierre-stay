@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     // 네이버 서치어드바이저에서 발급받은 HTML 태그 값을 여기에 채워주세요.
     // 예) other: { "naver-site-verification": "xxxxxxxxxxxxxxxxxxxxxxxxxx" }
     other: {
-      "naver-site-verification": "",
+      "naver-site-verification": "9956e71bed660290deba0761bf2318534be14ffc",
     },
   },
   category: "lodging",
