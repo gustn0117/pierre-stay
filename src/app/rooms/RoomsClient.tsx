@@ -154,7 +154,7 @@ function RoomB() {
   return (
     <div>
       <ScrollGallery
-        items={["/photos/b/main.jpg", "/photos/b/1.jpg", "/photos/b/living-bw.jpg", "/photos/b/2-2.jpg", "/photos/b/3.jpg", "/photos/b/4.jpg", "/photos/b/5.jpg", "/photos/b/bedroom-twin.jpg", "/photos/b/8.jpg", "/photos/b/9.jpg", "/photos/b/ondol.jpg", "/photos/b/bath.jpg"]}
+        items={["/photos/b/main.jpg", "/photos/b/1.jpg", "/photos/b/living-bw.jpg", "/photos/b/2-2.jpg", "/photos/b/3.jpg", "/photos/b/5.jpg", "/photos/b/bedroom-twin.jpg", "/photos/b/8.jpg", "/photos/b/9.jpg", "/photos/b/ondol.jpg", "/photos/b/bath.jpg"]}
         itemWidth={440}
         itemHeight={668}
         gap={8}
