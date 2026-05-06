@@ -70,9 +70,14 @@ export default function Footer() {
 
       <div className="border-t border-warm-800/40">
         <div className="max-w-6xl mx-auto px-6 md:px-12 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-          <p className="text-[10px] text-warm-700 tracking-wide">
-            &copy; {new Date().getFullYear()} PIERRE. All rights reserved.
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="text-[10px] text-warm-700 tracking-wide">
+              &copy; {new Date().getFullYear()} PIERRE. All rights reserved.
+            </p>
+            <p className="text-[10px] text-warm-700 tracking-wide">
+              사업자등록번호 371-79-00441 &middot; 대표자 김정현
+            </p>
+          </div>
           <p className="text-[10px] text-warm-700 tracking-wide">
             Private Pool Villa &middot; Yongin, Korea
           </p>
