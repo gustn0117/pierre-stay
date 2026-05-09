@@ -171,6 +171,45 @@ function NearbyPlaces() {
   );
 }
 
+function ReservationCTA() {
+  const naverUrl =
+    "https://map.naver.com/p/entry/place/2049699337?placePath=/room?entry=pll&from=map&fromNxList=true&fromPanelNum=1&additionalHeight=76&timestamp=202605092012&locale=ko&svcName=map_pcv5&businessCategory=pension&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh";
+
+  return (
+    <section id="reserve" className="bg-neutral-50 border-t border-neutral-200">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-0 py-20 md:py-24 flex flex-col items-center text-center">
+        <p className="text-xs tracking-[0.3em] uppercase text-neutral-400 mb-4">Reservation</p>
+        <h4 style={{ fontSize: 24, fontWeight: 600, lineHeight: "30px" }} className="text-black mb-4">
+          PIERRE에서의 하루를 예약하세요
+        </h4>
+        <p className="text-sm md:text-base text-neutral-500 leading-[1.9] mb-10 max-w-md">
+          네이버 예약을 통해 객실 공실과 요금을 실시간으로 확인하실 수 있습니다.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+          <a
+            href={naverUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white text-sm tracking-wider hover:bg-neutral-800 transition-colors"
+          >
+            네이버 예약하기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+          <a
+            href="tel:010-3542-8138"
+            className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-300 text-black text-sm tracking-wider hover:bg-white transition-colors"
+          >
+            전화 문의 010-3542-8138
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function InfoTabs() {
   const [tab, setTab] = useState<"location" | "rules" | "refund" | "safety">("location");
 
@@ -366,6 +405,7 @@ export default function Home() {
       />
       <NearbyPlaces />
       <InfoTabs />
+      <ReservationCTA />
     </>
   );
 }
