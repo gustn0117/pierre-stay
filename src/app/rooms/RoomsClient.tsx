@@ -140,8 +140,20 @@ function RoomA() {
           저희 피에르는 1층 풀빌라 객실과 2층 복층형 객실로 나뉘어져 있으며, 야외 수영장 이용은 1층 객실 전용입니다.
         </p>
 
-        <div className="mt-8 mb-16">
-          <a href="tel:010-3542-8138" className="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-sm w-full md:w-auto">
+        <div className="mt-8 mb-16 flex flex-col md:flex-row gap-3">
+          <a
+            href="https://map.naver.com/p/entry/place/2049699337?placePath=/room?entry=pll&from=map&fromNxList=true&fromPanelNum=1&additionalHeight=76&timestamp=202605092012&locale=ko&svcName=map_pcv5&businessCategory=pension&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white text-sm w-full md:w-auto"
+          >
+            네이버 예약하기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+          <a href="tel:010-3542-8138" className="inline-flex items-center justify-center px-8 py-4 border border-neutral-300 text-black text-sm w-full md:w-auto hover:bg-neutral-50 transition-colors">
             예약문의 010-3542-8138
           </a>
         </div>
