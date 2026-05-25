@@ -12,7 +12,7 @@ interface FeedItem {
 
 const items: FeedItem[] = [
   {
-    title: "A타입 풀빌라 원룸 오픈행사 (450,000원 → 350,000원)",
+    title: "A타입 풀빌라 원룸 오픈행사 (550,000원 → 350,000원)",
     link: `${SITE_URL}/rooms?type=a`,
     description:
       "1층 전용 프라이빗 수영장과 포인트존을 갖춘 원룸형 객실. 기준 2인 기준 1박 35만원 오픈행사 진행 중.",

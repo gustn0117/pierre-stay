@@ -75,7 +75,7 @@ function RoomA() {
 
         <div className="mb-10 pb-8 border-b border-neutral-200">
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-lg text-neutral-400 line-through">450,000원</span>
+            <span className="text-lg text-neutral-400 line-through">550,000원</span>
             <span className="text-xs px-2 py-0.5 bg-black text-white tracking-wider">오픈행사</span>
           </div>
           <div className="flex items-end gap-2">
@@ -183,7 +183,7 @@ function RoomB() {
 
         <div className="mb-10 pb-8 border-b border-neutral-200">
           <div className="flex items-end gap-2">
-            <span className="text-4xl font-light text-black">500,000</span>
+            <span className="text-4xl font-light text-black">550,000</span>
             <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
           </div>
           <p className="text-xs text-neutral-400 mt-2">* 성수기 요금 별도</p>

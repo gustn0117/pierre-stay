@@ -44,7 +44,7 @@ function RoomTypeSelector() {
                 <p className="text-base font-semibold text-black mb-1">A타입</p>
                 <p className="text-sm text-neutral-500">기준 2인(최대 6인)</p>
                 <div className="mt-4 flex items-baseline gap-3">
-                  <span className="text-sm text-neutral-400 line-through">450,000원</span>
+                  <span className="text-sm text-neutral-400 line-through">550,000원</span>
                   <span className="text-xs px-2 py-0.5 bg-black text-white">오픈행사</span>
                 </div>
                 <p className="text-2xl font-light text-black mt-1">350,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
@@ -67,7 +67,7 @@ function RoomTypeSelector() {
               <div>
                 <p className="text-base font-semibold text-black mb-1">B타입</p>
                 <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
-                <p className="text-2xl font-light text-black mt-4">500,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <p className="text-2xl font-light text-black mt-4">550,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
                 <p className="text-xs text-neutral-400 mt-1">* 성수기 요금 별도</p>
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
