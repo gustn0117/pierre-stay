@@ -4,7 +4,7 @@ import RoomsClient from "./RoomsClient";
 const SITE_URL = "https://pierre.hsweb.pics";
 const TITLE = "객실 안내 — A타입 풀빌라 원룸 / B타입 블랙&화이트 복층";
 const DESCRIPTION =
-  "PIERRE 피에르 풀빌라의 객실 안내. A타입 원룸형 풀빌라(기준 2인, 350,000원~ 오픈행사) 및 B타입 블랙&화이트 복층 객실의 상세 시설, 편의시설, 추가요금 안내.";
+  "PIERRE 피에르 풀빌라의 객실 안내. A타입 원룸형 풀빌라(기준 2인, 450,000원) 및 B타입 블랙&화이트 복층 객실의 상세 시설, 편의시설, 추가요금 안내.";
 
 export const metadata: Metadata = {
   title: TITLE,
