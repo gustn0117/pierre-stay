@@ -99,7 +99,7 @@ const lodgingJsonLd = {
   image: [`${SITE_URL}/hero.jpg`, `${SITE_URL}/photos/intro.jpg`],
   telephone: "+82-10-3542-8138",
   email: "mocacia@naver.com",
-  priceRange: "₩450,000–₩550,000",
+  priceRange: "₩450,000",
   currenciesAccepted: "KRW",
   checkinTime: "15:00",
   checkoutTime: "11:00",

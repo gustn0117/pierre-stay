@@ -173,13 +173,13 @@ function RoomB() {
       <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">
         <div className="flex items-center gap-4 mb-2">
           <h1 style={{ fontSize: 28, fontWeight: 600 }} className="text-black">B타입 — 블랙&화이트 복층</h1>
-          <span className="px-3 py-1 bg-neutral-600 text-white text-xs tracking-wider">SOLD OUT</span>
+          <span className="px-3 py-1 bg-black text-white text-xs tracking-wider">10월 오픈 예정</span>
         </div>
         <p className="text-sm text-neutral-500 mb-8">모던한 블랙&화이트 컨셉의 2~3층 복층 객실</p>
 
         <div className="mb-10 pb-8 border-b border-neutral-200">
           <div className="flex items-end gap-2">
-            <span className="text-4xl font-light text-black">550,000</span>
+            <span className="text-4xl font-light text-black">450,000</span>
             <span className="text-sm text-neutral-400 mb-1">원 / 1박</span>
           </div>
           <p className="text-xs text-neutral-400 mt-2">* 성수기 요금 별도</p>
@@ -219,7 +219,17 @@ function RoomB() {
         <AmenityGrid items={amenitiesB} />
 
         <div className="mt-10 mb-16">
-          <p className="text-center text-sm text-neutral-400">현재 일시 운영중단 상태입니다</p>
+          <p className="text-center text-sm text-neutral-500 py-4 border-t border-neutral-100">
+            B타입은 2026년 10월 오픈 예정입니다. 오픈 일정 및 예약은 전화로 문의해 주세요.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <a
+              href="tel:010-3542-8138"
+              className="inline-flex items-center justify-center px-8 py-4 border border-neutral-300 text-black text-sm w-full md:w-auto hover:bg-neutral-50 transition-colors"
+            >
+              오픈 문의 010-3542-8138
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -261,7 +271,7 @@ export default function RoomsClient() {
             }`}
           >
             B타입
-            <span className="ml-2 text-xs text-neutral-400">SOLD OUT</span>
+            <span className="ml-2 text-xs text-neutral-400">10월 오픈</span>
             {room === "b" && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />}
           </button>
         </div>

@@ -55,15 +55,15 @@ function RoomTypeSelector() {
           <a href="/rooms?type=b" className="border border-neutral-200 grid grid-cols-1 md:grid-cols-2 relative hover:border-neutral-400 transition-colors group">
             <div className="relative aspect-[16/9] md:aspect-auto">
               <img src="/photos/b/main.jpg" alt="B타입 복층" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-white/40 flex items-center justify-center">
-                <span className="bg-neutral-600 text-white px-6 py-2 text-sm tracking-wider">SOLD OUT</span>
+              <div className="absolute inset-0 bg-white/30 flex items-center justify-center">
+                <span className="bg-black text-white px-6 py-2 text-sm tracking-wider">10월 오픈 예정</span>
               </div>
             </div>
             <div className="p-6 flex flex-col justify-between">
               <div>
                 <p className="text-base font-semibold text-black mb-1">B타입</p>
                 <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
-                <p className="text-2xl font-light text-black mt-4">550,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
+                <p className="text-2xl font-light text-black mt-4">450,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
                 <p className="text-xs text-neutral-400 mt-1">* 성수기 요금 별도</p>
               </div>
               <div className="mt-4 inline-flex items-center gap-2 text-sm text-neutral-400 group-hover:text-black transition-colors">
