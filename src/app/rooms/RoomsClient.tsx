@@ -9,6 +9,11 @@ import {
   IconSpeaker,
 } from "@/components/Icons";
 
+const NAVER_BOOKING_A =
+  "https://map.naver.com/p/entry/place/2049699337?placePath=/room?entry=pll&from=map&fromNxList=true&fromPanelNum=1&additionalHeight=76&timestamp=202605092012&locale=ko&svcName=map_pcv5&businessCategory=pension&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh";
+const NAVER_BOOKING_B =
+  "https://m.booking.naver.com/booking/3/bizes/1649605/items/7660435?theme=place&tab=details&lang=ko&area=plt";
+
 const amenitiesA = [
   { icon: <IconHairdryer className="w-6 h-6" />, label: "드라이어" },
   { icon: <IconCoffee className="w-6 h-6" />, label: "커피머신" },
@@ -138,7 +143,7 @@ function RoomA() {
 
         <div className="mt-8 mb-16 flex flex-col md:flex-row gap-3">
           <a
-            href="https://map.naver.com/p/entry/place/2049699337?placePath=/room?entry=pll&from=map&fromNxList=true&fromPanelNum=1&additionalHeight=76&timestamp=202605092012&locale=ko&svcName=map_pcv5&businessCategory=pension&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh"
+            href={NAVER_BOOKING_A}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white text-sm w-full md:w-auto"
@@ -171,10 +176,7 @@ function RoomB() {
       />
 
       <div className="max-w-[1280px] mx-auto px-4 md:px-0 mt-8">
-        <div className="flex items-center gap-4 mb-2">
-          <h1 style={{ fontSize: 28, fontWeight: 600 }} className="text-black">B타입 — 블랙&화이트 복층</h1>
-          <span className="px-3 py-1 bg-black text-white text-xs tracking-wider">10월 오픈 예정</span>
-        </div>
+        <h1 style={{ fontSize: 28, fontWeight: 600 }} className="text-black mb-2">B타입 — 블랙&화이트 복층</h1>
         <p className="text-sm text-neutral-500 mb-8">모던한 블랙&화이트 컨셉의 2~3층 복층 객실</p>
 
         <div className="mb-10 pb-8 border-b border-neutral-200">
@@ -218,18 +220,26 @@ function RoomB() {
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-6">객실 용품</h3>
         <AmenityGrid items={amenitiesB} />
 
-        <div className="mt-10 mb-16">
-          <p className="text-center text-sm text-neutral-500 py-4 border-t border-neutral-100">
-            B타입은 2026년 10월 오픈 예정입니다. 오픈 일정 및 예약은 전화로 문의해 주세요.
-          </p>
-          <div className="mt-6 flex justify-center">
-            <a
-              href="tel:010-3542-8138"
-              className="inline-flex items-center justify-center px-8 py-4 border border-neutral-300 text-black text-sm w-full md:w-auto hover:bg-neutral-50 transition-colors"
-            >
-              오픈 문의 010-3542-8138
-            </a>
-          </div>
+        <p className="mt-10 text-center text-sm text-neutral-400 py-4 border-t border-neutral-100">
+          저희 피에르는 1층 풀빌라 객실과 2층 복층형 객실로 나뉘어져 있으며, 야외 수영장 이용은 1층 객실 전용입니다.
+        </p>
+
+        <div className="mt-8 mb-16 flex flex-col md:flex-row gap-3">
+          <a
+            href={NAVER_BOOKING_B}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white text-sm w-full md:w-auto"
+          >
+            네이버 예약하기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+          <a href="tel:010-3542-8138" className="inline-flex items-center justify-center px-8 py-4 border border-neutral-300 text-black text-sm w-full md:w-auto hover:bg-neutral-50 transition-colors">
+            예약문의 010-3542-8138
+          </a>
         </div>
       </div>
     </div>
@@ -271,7 +281,6 @@ export default function RoomsClient() {
             }`}
           >
             B타입
-            <span className="ml-2 text-xs text-neutral-400">10월 오픈</span>
             {room === "b" && <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />}
           </button>
         </div>
