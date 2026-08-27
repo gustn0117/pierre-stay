@@ -123,7 +123,6 @@ const lodgingJsonLd = {
     { "@type": "LocationFeatureSpecification", name: "선베드", value: true },
     { "@type": "LocationFeatureSpecification", name: "드레스룸", value: true },
     { "@type": "LocationFeatureSpecification", name: "빔프로젝터", value: true },
-    { "@type": "LocationFeatureSpecification", name: "불멍(가습)", value: true },
     { "@type": "LocationFeatureSpecification", name: "LG 스탠바이미", value: true },
   ],
   sameAs: ["https://www.instagram.com/pierre__stay/"],
@@ -164,13 +163,8 @@ const lodgingJsonLd = {
       bed: [
         {
           "@type": "BedDetails",
-          typeOfBed: "King",
-          numberOfBeds: 1,
-        },
-        {
-          "@type": "BedDetails",
           typeOfBed: "Queen",
-          numberOfBeds: 2,
+          numberOfBeds: 3,
         },
       ],
       floorSize: {

@@ -194,7 +194,7 @@ function RoomB() {
             ["체크인 / 체크아웃", "15:00 / 11:00"],
             ["침구류 추가", "3만원"],
             ["객실 면적", "2F, 3F 각 82㎡"],
-            ["침대 유형", "라지킹(1), 퀸(2)"],
+            ["침대 유형", "퀸(3)"],
           ].map(([label, value]) => (
             <div key={label} className="flex justify-between py-3 border-b border-neutral-100">
               <span className="text-neutral-400">{label}</span>
@@ -212,7 +212,7 @@ function RoomB() {
 
         <h3 style={{ fontSize: 18, fontWeight: 600 }} className="text-black mb-4">편의시설</h3>
         <div className="flex flex-wrap gap-3 mb-12">
-          {["드레스룸", "빔프로젝터", "불멍(가습)", "테라스", "세탁기/건조기", "식기세척기"].map((item) => (
+          {["드레스룸", "빔프로젝터", "테라스", "세탁기/건조기", "식기세척기"].map((item) => (
             <span key={item} className="px-4 py-2 bg-black text-sm text-white rounded">{item}</span>
           ))}
         </div>
