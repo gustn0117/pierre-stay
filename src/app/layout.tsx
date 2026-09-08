@@ -154,11 +154,11 @@ const lodgingJsonLd = {
       "@type": "HotelRoom",
       name: "B타입 — 블랙&화이트 복층",
       description:
-        "2~3층 복층 구조의 블랙&화이트 컨셉 객실. 기준 4인(최대 8인), 각 층 82㎡.",
+        "2~3층 복층 구조의 블랙&화이트 컨셉 객실. 기준 4인(최대 10인), 각 층 82㎡.",
       occupancy: {
         "@type": "QuantitativeValue",
         minValue: 4,
-        maxValue: 8,
+        maxValue: 10,
       },
       bed: [
         {

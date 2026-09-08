@@ -59,7 +59,7 @@ function RoomTypeSelector() {
             <div className="p-6 flex flex-col justify-between">
               <div>
                 <p className="text-base font-semibold text-black mb-1">B타입</p>
-                <p className="text-sm text-neutral-500">기준 4인(최대 8인)</p>
+                <p className="text-sm text-neutral-500">기준 4인(최대 10인)</p>
                 <p className="text-2xl font-light text-black mt-4">450,000<span className="text-sm text-neutral-400 ml-1">원</span><span className="text-xs text-neutral-400">/ 1박</span></p>
                 <p className="text-xs text-neutral-400 mt-1">* 성수기 요금 별도</p>
               </div>
